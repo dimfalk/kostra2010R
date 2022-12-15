@@ -5,18 +5,20 @@
 \alias{kostra_dwd_2010r}
 \title{KOSTRA-DWD-2010R}
 \format{
-A list of length 18 with simple feature collections of type POLYGON with 8,453 features and 10 field each:
+A list of length 18 with simple feature collections of type POLYGON with 8,453 features and 10 fields each:
 \describe{
-\item{INDEX_RC}{grid index}
-\item{HN_001A_}{design precipitation for return period 1 a}
-\item{HN_002A_}{design precipitation for return period 2 a}
-\item{HN_003A_}{design precipitation for return period 3 a}
-\item{HN_005A_}{design precipitation for return period 5 a}
-\item{HN_010A_}{design precipitation for return period 10 a}
-\item{HN_020A_}{design precipitation for return period 20 a}
-\item{HN_030A_}{design precipitation for return period 30 a}
-\item{HN_050A_}{design precipitation for return period 50 a}
-\item{HN_100A_}{design precipitation for return period 100 a}
+\item{INDEX_RC}{unique grid cell identifier}
+
+\item{HN_001A_}{design precipitation depth \code{[mm]} for return period tn = 1 a}
+\item{HN_002A_}{design precipitation depth \code{[mm]} for return period tn = 2 a}
+\item{HN_003A_}{design precipitation depth \code{[mm]} for return period tn = 3 a}
+\item{HN_005A_}{design precipitation depth \code{[mm]} for return period tn = 5 a}
+\item{HN_010A_}{design precipitation depth \code{[mm]} for return period tn = 10 a}
+\item{HN_020A_}{design precipitation depth \code{[mm]} for return period tn = 20 a}
+\item{HN_030A_}{design precipitation depth \code{[mm]} for return period tn = 30 a}
+\item{HN_050A_}{design precipitation depth \code{[mm]} for return period tn = 50 a}
+\item{HN_100A_}{design precipitation depth \code{[mm]} for return period tn = 100 a}
+
 \item{geometry}{polygon coordinates}
 }
 }
