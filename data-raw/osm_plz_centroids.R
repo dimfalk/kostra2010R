@@ -4,9 +4,9 @@ file <- "plz-5stellig.shp.zip"
 
 base_url <- paste0("https://downloads.suche-postleitzahl.org/v2/public/", file)
 
-download.file(base_url, file)
+utils::download.file(base_url, file)
 
-unzip(file, exdir = file |> stringr::str_sub(1, -9))
+utils::unzip(file, exdir = file |> stringr::str_sub(1, -9))
 
 unlink(file)
 

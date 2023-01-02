@@ -4,9 +4,9 @@ file <- "vg250_12-31.utm32s.shape.ebenen.zip"
 
 base_url <- paste0("https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_1231/aktuell/", file)
 
-download.file(base_url, file)
+utils::download.file(base_url, file)
 
-unzip(file)
+utils::unzip(file)
 
 unlink(file)
 
