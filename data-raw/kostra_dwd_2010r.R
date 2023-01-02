@@ -1,6 +1,6 @@
 ## code to prepare `kostra_dwd_2010r` dataset goes here
 
-source <- "https://opendata.dwd.de/climate_environment/CDC/grids_germany/return_periods/precipitation/KOSTRA/KOSTRA_DWD_2010R/gis/"
+base_url <- "https://opendata.dwd.de/climate_environment/CDC/grids_germany/return_periods/precipitation/KOSTRA/KOSTRA_DWD_2010R/gis/"
 
 d <- c(5, 10, 15, 20, 30, 45, 60, 90, 120, 180, 240, 360, 540, 720, 1080, 1440, 2880, 4320)
 
@@ -8,13 +8,14 @@ d_pad <- stringr::str_pad(d, width = 4, pad = "0")
 
 files <- paste0("GIS_KOSTRA-DWD-2010R_D", d_pad,".zip")
 
-urls <- paste0(source, files)
+urls <- paste0(base_url, files)
 
+# download and unzip files
 for (i in 1:length(files)) {
 
-  download.file(urls[i], files[i])
+  utils::download.file(urls[i], files[i])
 
-  unzip(files[i])
+  utils::unzip(files[i])
 
   unlink(files[i])
 }
@@ -23,11 +24,20 @@ files_shp <- list.files(pattern = "*.shp", recursive = TRUE)
 
 kostra_dwd_2010r <- list()
 
+# build list of sf objects
 for (i in 1:length(d)) {
 
   ds <- paste0("D", d_pad[i])
 
   assign(ds, files_shp[i] |> sf::read_sf())
+
+  # geom <- get(ds) |> sf::st_geometry()
+  #
+  # data <- get(ds) |> sf::st_drop_geometry()
+  #
+  # data <- replace(data, data == -99.9, NA)
+  #
+  # assign(ds, sf::st_set_geometry(data, geom))
 
   kostra_dwd_2010r[[ds]] <- get(ds)
 }
