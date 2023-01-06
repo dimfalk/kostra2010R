@@ -31,13 +31,14 @@ for (i in 1:length(d)) {
 
   assign(ds, files_shp[i] |> sf::read_sf())
 
-  # geom <- get(ds) |> sf::st_geometry()
-  #
-  # data <- get(ds) |> sf::st_drop_geometry()
-  #
-  # data <- replace(data, data == -99.9, NA)
-  #
-  # assign(ds, sf::st_set_geometry(data, geom))
+  # replace -99.9 by actual NA values
+  geom <- get(ds) |> sf::st_geometry()
+
+  data <- get(ds) |> sf::st_drop_geometry()
+
+  data <- replace(data, data == -99.9, NA)
+
+  assign(ds, sf::st_set_geometry(data, geom))
 
   kostra_dwd_2010r[[ds]] <- get(ds)
 }

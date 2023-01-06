@@ -69,9 +69,6 @@ get_stats <- function(x = NULL) {
   cnames <- cnames |> stringr::str_sub(start = 1, end = -2)
   colnames(df) <- cnames
 
-  # NA values
-  df <- replace(df, df == -99.9, NA)
-
   # append interval duration
   df["D_min"] <- intervals
 
