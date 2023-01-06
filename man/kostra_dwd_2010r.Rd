@@ -3,7 +3,7 @@
 \docType{data}
 \name{kostra_dwd_2010r}
 \alias{kostra_dwd_2010r}
-\title{KOSTRA-DWD-2010R}
+\title{Data: KOSTRA-DWD-2010R}
 \format{
 A list of length 18 with simple feature collections of type POLYGON with 8,453 features and 10 fields each:
 \describe{

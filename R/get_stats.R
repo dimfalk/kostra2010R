@@ -1,9 +1,9 @@
-#' Get cell-specific statistics from the KOSTRA-2010R data set
+#' Get cell-specific statistics from the KOSTRA-DWD-2010R dataset
 #'
 #' @param x character. Relevant "INDEX_RC" field to be queried.
 #'
 #' @return Tibble containing statistical precipitation depths as a function of
-#'     duration and return periods for the KOSTRA-2010R grid cell specified.
+#'     duration and return periods for the KOSTRA-DWD-2010R grid cell specified.
 #' @export
 #'
 #' @examples

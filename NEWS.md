@@ -1,4 +1,4 @@
-# version 0.7.2
+# version 0.7.3
 
 ## features
 
@@ -18,6 +18,7 @@
 - package data has been imported using `sf::read_sf()` instead of `sf::st_read()`
 - proper internal unit conversion when using `as_yield()` and `as_depth()`
 - `kostra_dwd_2010r` dataset now has actual `NA` values instead of `-99.9` placeholders
+- general cleaning and harmonization of roxygen2 function documentation
 
 
 ## bug fixes 

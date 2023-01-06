@@ -2,7 +2,7 @@
 % Please edit documentation in R/idx_build.R
 \name{idx_build}
 \alias{idx_build}
-\title{Construct "INDEX_RC" based on given X and Y information}
+\title{Build "INDEX_RC" identifier based on given X and Y information}
 \usage{
 idx_build(col = NULL, row = NULL)
 }
@@ -15,7 +15,7 @@ idx_build(col = NULL, row = NULL)
 character. Unique representation of the relevant "INDEX_RC" field.
 }
 \description{
-Construct "INDEX_RC" based on given X and Y information
+Build "INDEX_RC" identifier based on given X and Y information
 }
 \examples{
 idx_build(col = 11, row = 49)

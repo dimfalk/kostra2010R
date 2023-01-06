@@ -1,6 +1,7 @@
-#' Get precipitation depth for a specified duration and return period
+#' Get precipitation depth for a specified duration level and return period
 #'
-#' @param x Tibble containing grid cell statistics from KOSTRA-2010R.
+#' @param x Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
+#'     as provided by `get_stats()`.
 #' @param d numeric. Precipitation duration level \code{[min]}.
 #' @param tn numeric. Return period \code{[a]}.
 #'

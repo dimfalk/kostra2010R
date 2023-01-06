@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_stats.R
 \name{get_stats}
 \alias{get_stats}
-\title{Get cell-specific statistics from the KOSTRA-2010R data set}
+\title{Get cell-specific statistics from the KOSTRA-DWD-2010R dataset}
 \usage{
 get_stats(x = NULL)
 }
@@ -11,10 +11,10 @@ get_stats(x = NULL)
 }
 \value{
 Tibble containing statistical precipitation depths as a function of
-duration and return periods for the KOSTRA-2010R grid cell specified.
+duration and return periods for the KOSTRA-DWD-2010R grid cell specified.
 }
 \description{
-Get cell-specific statistics from the KOSTRA-2010R data set
+Get cell-specific statistics from the KOSTRA-DWD-2010R dataset
 }
 \examples{
 get_stats("49011")

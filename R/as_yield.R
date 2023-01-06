@@ -1,4 +1,4 @@
-#' Convert precipitation depth in precipitation yield as a function of duration.
+#' Convert precipitation depth in precipitation yield as a function of duration
 #'
 #' @param x numeric. Precipitation depth \code{[mm]}.
 #' @param d numeric. Precipitation duration level \code{[min]}.

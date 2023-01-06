@@ -1,4 +1,4 @@
-#' Get index of relevant KOSTRA-2010R cell based on user-defined geometry
+#' Get relevant "INDEX_RC" based on user-defined geometry
 #'
 #' @param x Object of type `sfc_POINT`, as provided by `get_centroid()`.
 #'
@@ -21,13 +21,13 @@ get_idx <- function(x = NULL) {
 
   # main -----------------------------------------------------------------------
 
-  # reproject sf point to target crs of the dataset
+  # reproject sf object to target crs of the dataset
   location <- sf::st_transform(x, "epsg:3034")
 
   # get first sf collection
   shp <- kostra_dwd_2010r[[1]]
 
-  # temporarily fixing r-cmd-check on ubuntu-latest due to GDAL 3.0.2?
+  # temporarily fixing R CMD check on ubuntu-latest due to GDAL 3.0.2?
   sf::st_crs(location) <- "epsg:3034"
   sf::st_crs(shp) <- "epsg:3034"
 

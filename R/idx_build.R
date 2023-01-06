@@ -1,4 +1,4 @@
-#' Construct "INDEX_RC" based on given X and Y information
+#' Build "INDEX_RC" identifier based on given X and Y information
 #'
 #' @param col integer. One pick from set {0:78}.
 #' @param row integer. One pick from set {0:106}.

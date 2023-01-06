@@ -1,4 +1,4 @@
-#' KOSTRA-DWD-2010R
+#' Data: KOSTRA-DWD-2010R
 #'
 #' Statistical precipitation values as a function of duration and return period
 #'
@@ -27,7 +27,7 @@
 
 
 
-#' Point representation of municipalities in Germany (VG250 31.12.2021)
+#' Data: Point representation of municipalities in Germany (VG250 31.12.2021)
 #'
 #' A subset of data from the VG250_PK product provided by the Federal Agency for Cartography and Geodesy, Germany
 #'
@@ -45,7 +45,7 @@
 
 
 
-#' Centroids of zip code areas in Germany
+#' Data: Centroids of zip code areas in Germany
 #'
 #' A subset/derivative of 5-digit zip code data provided by OpenStreetMap
 #'

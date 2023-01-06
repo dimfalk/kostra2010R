@@ -1,9 +1,9 @@
-#' Construct an geometry set object of type POINT based on user input
+#' Construct a geometry set object of type sfc_POINT based on user input
 #'
-#' @param x Vector of length 2 containing numeric representing coordinates,
-#'   or character of length 1 representing the name of a municipality,
+#' @param x Vector of length 2 containing numeric representing coordinates, \cr
+#'   or character of length 1 representing the name of a municipality, \cr
 #'   or character of nchar 5 representing a postal zip code.
-#' @param epsg numeric. Coordinate reference system definition.
+#' @param epsg numeric. Coordinate reference system identifier.
 #'
 #' @return Object of type `sfc_POINT`.
 #' @export

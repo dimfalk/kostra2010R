@@ -1,13 +1,14 @@
 #' Extrapolation of precipitation depths for Tn > 100 a according to PEN-LAWA
 #'
-#' @param x Tibble containing grid cell statistics from KOSTRA-2010R.
+#' @param x Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
+#'     as provided by `get_stats()`.
 #'
 #' @return Tibble containing extrapolated precipitation depths as a function of
 #'     duration and return periods.
 #' @export
 #'
 #' @references
-#' Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).
+#' Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).\cr
 #' Verworn & Draschoff (2008): PEN-Erweiterung.
 #'
 #' @examples

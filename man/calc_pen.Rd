@@ -7,7 +7,8 @@
 calc_pen(x = NULL)
 }
 \arguments{
-\item{x}{Tibble containing grid cell statistics from KOSTRA-2010R.}
+\item{x}{Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
+as provided by \code{get_stats()}.}
 }
 \value{
 Tibble containing extrapolated precipitation depths as a function of
@@ -22,6 +23,6 @@ kostra <- get_stats("49011")
 calc_pen(kostra)
 }
 \references{
-Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).
+Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).\cr
 Verworn & Draschoff (2008): PEN-Erweiterung.
 }
