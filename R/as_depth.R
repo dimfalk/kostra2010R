@@ -6,7 +6,7 @@
 #' @return units. Precipitation depth \code{[mm]}.
 #' @export
 #'
-#' @seealso \code{\link{as_yield}}
+#' @seealso \link{as_yield}
 #'
 #' @examples
 #' as_depth(x = 126.94, d = 60)
