@@ -7,7 +7,8 @@
 calc_designstorm(x = NULL, tn = NULL, d = NULL, type = NULL)
 }
 \arguments{
-\item{x}{Tibble containing grid cell statistics from KOSTRA-DWD-2010R.}
+\item{x}{Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
+as provided by \code{get_stats()}.}
 
 \item{tn}{numeric. Return period \code{[a]}.}
 
