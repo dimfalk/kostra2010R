@@ -16,9 +16,12 @@ knitr::opts_chunk$set(
 # kostra2010R
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/dimfalk/kostra2010R/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dimfalk/kostra2010R/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/dimfalk/kostra2010R/branch/main/graph/badge.svg)](https://app.codecov.io/gh/dimfalk/kostra2010R?branch=main)
+
+[![R-CMD-check](https://github.com/dimfalk/kostra2010R/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dimfalk/kostra2010R/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/dimfalk/kostra2010R/branch/main/graph/badge.svg)](https://app.codecov.io/gh/dimfalk/kostra2010R?branch=main)
+
 <!-- badges: end -->
+
+--- As of 01.01.2023, kostra2010R is officially replaced by kostra2020 (see [dimfalk/kostra2020](https://github.com/dimfalk/kostra2020)). ---
 
 The main goal of kostra2010R is to provide access to KOSTRA-DWD-2010R dataset from within R.
 
@@ -85,7 +88,6 @@ p4 <- get_centroid("52070")
 p4
 ```
 
-
 These coordinates can be used subsequently to spatially query the relevant grid index.
 
 ```{r}
@@ -127,15 +129,13 @@ If we now wanted to know the statistical precipitation depth e.g. for an event o
 get_depth(kostra, d = 240, tn = 100)
 ```
 
-If you need precipitation yield values [l/(s*ha)] instead of precipitation depth [mm] or vice versa, make use of the following helper function.
+If you need precipitation yield values [l/(s\*ha)] instead of precipitation depth [mm] or vice versa, make use of the following helper function.
 
 ```{r}
 as_yield(62.1, d = 240)
 
 as_depth(43.1, d = 240)
 ```
-
-
 
 ### Get return periods
 

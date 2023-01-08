@@ -8,7 +8,11 @@
 [![R-CMD-check](https://github.com/dimfalk/kostra2010R/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dimfalk/kostra2010R/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/dimfalk/kostra2010R/branch/main/graph/badge.svg)](https://app.codecov.io/gh/dimfalk/kostra2010R?branch=main)
+
 <!-- badges: end -->
+
+— As of 01.01.2023, kostra2010R is officially replaced by kostra2020
+(see [dimfalk/kostra2020](https://github.com/dimfalk/kostra2020)). —
 
 The main goal of kostra2010R is to provide access to KOSTRA-DWD-2010R
 dataset from within R.
