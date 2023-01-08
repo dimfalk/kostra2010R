@@ -8,6 +8,8 @@
 #' @return units. Precipitation depth \code{[mm]}.
 #' @export
 #'
+#' @seealso \link{get_stats}
+#'
 #' @examples
 #' kostra <- get_stats("49011")
 #'

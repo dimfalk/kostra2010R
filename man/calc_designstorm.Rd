@@ -27,3 +27,6 @@ kostra <- get_stats("49011")
 
 calc_designstorm(kostra, tn = 20, d = 60, type = "EulerII")
 }
+\seealso{
+\link{get_stats}
+}

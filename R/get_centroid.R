@@ -29,7 +29,7 @@ get_centroid <- function(x = NULL,
   checkmate::assert(
 
     checkmate::testNumeric(x, len = 2, any.missing = FALSE),
-    checkmate::testCharacter(x, len = 1),
+    checkmate::testCharacter(x, len = 1)
   )
 
   checkmate::assert_numeric(epsg, len = 1)

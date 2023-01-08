@@ -12,6 +12,8 @@
 #'   Vector of length 1 with `interpolate = TRUE`.
 #' @export
 #'
+#' @seealso \link{get_stats}
+#'
 #' @examples
 #' kostra <- get_stats("49011")
 #'

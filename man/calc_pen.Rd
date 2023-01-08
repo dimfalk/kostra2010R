@@ -26,3 +26,6 @@ calc_pen(kostra)
 Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).\cr
 Verworn & Draschoff (2008): PEN-Erweiterung.
 }
+\seealso{
+\link{get_stats}
+}

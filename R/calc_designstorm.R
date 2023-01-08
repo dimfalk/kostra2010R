@@ -9,6 +9,8 @@
 #' @return An xts object.
 #' @export
 #'
+#' @seealso \link{get_stats}
+#'
 #' @examples
 #' kostra <- get_stats("49011")
 #'

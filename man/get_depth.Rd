@@ -25,3 +25,6 @@ kostra <- get_stats("49011")
 
 get_depth(kostra, d = 60, tn = 50)
 }
+\seealso{
+\link{get_stats}
+}
