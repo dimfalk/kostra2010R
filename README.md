@@ -209,7 +209,7 @@ get_depth(kostra, d = 240, tn = 100)
 
 In order to respect statistical uncertainties, as proposed in Malitz &
 Ertel (2015), ranging between 10 % and 20 % as a function of the chosen
-return period, make use of `uncertain = TRUE`, to get an interval
+return period, make use of `uncertain = TRUE` to get an interval
 centered around the single value above.
 
 ``` r
