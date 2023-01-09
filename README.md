@@ -207,6 +207,18 @@ get_depth(kostra, d = 240, tn = 100)
 #> 62.1 [mm]
 ```
 
+In order to respect statistical uncertainties, as proposed in Malitz &
+Ertel (2015), ranging between 10 % and 20 % as a function of the chosen
+return period, make use of `uncertain = TRUE`, to get an interval
+centered around the single value above.
+
+``` r
+# Same data, but with uncertainties considered.
+get_depth(kostra, d = 240, tn = 100, uncertain = TRUE)
+#> Units: [mm]
+#> [1] 49.7 74.5
+```
+
 If you need precipitation yield values \[l/(s\*ha)\] instead of
 precipitation depth \[mm\] or vice versa, make use of the following
 helper function.
@@ -362,7 +374,7 @@ ggplot(longdata, aes(D_min, value, colour = name)) +
           subtitle = paste0("INDEX_RC: ", attr(kostra, "id")))
 ```
 
-<img src="man/figures/README-unnamed-chunk-20-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
 
 … or exported to disk using `write.csv2()`.
 

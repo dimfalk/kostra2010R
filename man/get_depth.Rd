@@ -4,7 +4,7 @@
 \alias{get_depth}
 \title{Get precipitation depth for a specified duration level and return period}
 \usage{
-get_depth(x = NULL, d = NULL, tn = NULL)
+get_depth(x = NULL, d = NULL, tn = NULL, uncertain = FALSE)
 }
 \arguments{
 \item{x}{Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
@@ -13,6 +13,9 @@ as provided by \code{get_stats()}.}
 \item{d}{numeric. Precipitation duration level \code{[min]}.}
 
 \item{tn}{numeric. Return period \code{[a]}.}
+
+\item{uncertain}{(optional) logical. Consider overall uncertainties, as
+proposed in Malitz & Ertel (2015)?}
 }
 \value{
 units. Precipitation depth \code{[mm]}.
@@ -24,6 +27,11 @@ Get precipitation depth for a specified duration level and return period
 kostra <- get_stats("49011")
 
 get_depth(kostra, d = 60, tn = 50)
+get_depth(kostra, d = 60, tn = 50, uncertain = TRUE)
+}
+\references{
+Malitz, G. & Ertel, H. (2015): KOSTRA-DWD-2010 -
+Starkniederschlagshöhen für Deutschland (Bezugszeitraum 1951 bis 2010).
 }
 \seealso{
 \link{get_stats}

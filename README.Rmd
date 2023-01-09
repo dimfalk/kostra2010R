@@ -128,6 +128,12 @@ If we now wanted to know the statistical precipitation depth e.g. for an event o
 # with a return period of 100 a.
 get_depth(kostra, d = 240, tn = 100)
 ```
+In order to respect statistical uncertainties, as proposed in Malitz & Ertel (2015), ranging between 10 % and 20 % as a function of the chosen return period, make use of `uncertain = TRUE`, to get an interval centered around the single value above.
+
+```{r}
+# Same data, but with uncertainties considered.
+get_depth(kostra, d = 240, tn = 100, uncertain = TRUE)
+```
 
 If you need precipitation yield values [l/(s\*ha)] instead of precipitation depth [mm] or vice versa, make use of the following helper function.
 

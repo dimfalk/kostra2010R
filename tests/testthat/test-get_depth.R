@@ -9,6 +9,15 @@ test_that("Getting precipitation depths for DWD-KOSTRA-2010R works.", {
   expect_equal(get_depth(kostra_ref, d = 4320, tn = 100), units::as_units(108.1, "mm"))
 })
 
+test_that("Getting precipitation depths (considering uncertainties) for DWD-KOSTRA-2010R works.", {
+
+  expect_equal(get_depth(kostra_ref, d = 1440, tn = 5, uncertain = TRUE), units::as_units(c(46.7, 57.1), "mm"))
+
+  expect_equal(get_depth(kostra_ref, d = 1440, tn = 50, uncertain = TRUE), units::as_units(c(63.7, 86.1), "mm"))
+
+  expect_equal(get_depth(kostra_ref, d = 1440, tn = 100, uncertain = TRUE), units::as_units(c(65.4, 98.2), "mm"))
+})
+
 test_that("Getting precipitation depths for stats from DWA-A 531 works.", {
 
   expect_equal(get_depth(stats_ref, d = 5, tn = 1), units::as_units(6.1, "mm"))

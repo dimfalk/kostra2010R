@@ -1,4 +1,4 @@
-# version 0.7.3
+# version 0.8.0
 
 ## features
 
@@ -7,6 +7,7 @@
 - `get_centroid()` now allows determination of coordinates based on municipality names and postal codes
 - `calc_designstorm()` now allows generation of modelled rainfall from statistical precipitation
 - `get_returnp()` now allows interpolation of return periods with `interpolate = TRUE`
+- `get_depth()` now allows to consider uncertainties with `uncertain = TRUE`
 
 
 ## enhancements
