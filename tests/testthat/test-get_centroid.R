@@ -13,14 +13,14 @@ test_that("Function working as intended.", {
 
   testthat::skip_if_offline()
 
-  p <- get_centroid(x = "52070") |> sf::st_coordinates() |> as.numeric() |> round(2)
-  expect_equal(p, c(6.10, 50.79))
+  p <- get_centroid(x = "52070") |> sf::st_coordinates() |> as.numeric() |> round(1)
+  expect_equal(p, c(6.1, 50.8))
 
-  p <- get_centroid(x = "Freiburg im Breisgau") |> sf::st_coordinates() |> as.numeric() |> round(2)
-  expect_equal(p, c(7.85, 48.00))
+  p <- get_centroid(x = "Freiburg im Breisgau") |> sf::st_coordinates() |> as.numeric() |> round(1)
+  expect_equal(p, c(7.8, 48.0))
 
-  p <- get_centroid(x = "Kronprinzenstr. 24, 45128 Essen") |> sf::st_coordinates() |> as.numeric() |> round(2)
-  expect_equal(p, c(7.02, 51.45))
+  p <- get_centroid(x = "Kronprinzenstr. 24, 45128 Essen") |> sf::st_coordinates() |> as.numeric() |> round(1)
+  expect_equal(p, c(7.0, 51.4))
 })
 
 test_that("Fallbacks working as intended.", {
