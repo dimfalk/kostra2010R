@@ -1,4 +1,4 @@
-# version 0.8.0
+# version 0.8.1
 
 ## features
 
@@ -13,13 +13,12 @@
 ## enhancements
 
 - `get_pdepth()` and `get_returnp()` now return values supplemented by units
-- `get_centroid()` now makes use of the VG250_PK dataset instead of VG250_GEM centroids
-- `get_centroid()` now prompts a warning when the object returned contains multiple hits
 - `get_centroid()` now prompts an error when the object returned contains no hits
 - package data has been imported using `sf::read_sf()` instead of `sf::st_read()`
 - proper internal unit conversion when using `as_yield()` and `as_depth()`
 - `kostra_dwd_2010r` dataset now has actual `NA` values instead of `-99.9` placeholders
 - general cleaning and harmonization of roxygen2 function documentation
+- `get_centroid()` now makes use of the Nominatim API via `tidygeocoder::geocode()` for forward geocoding instead of using datasets shipped with the package
 
 
 ## bug fixes 
