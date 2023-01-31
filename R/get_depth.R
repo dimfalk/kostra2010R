@@ -4,7 +4,7 @@
 #'     as provided by `get_stats()`.
 #' @param d numeric. Precipitation duration level \code{[min]}.
 #' @param tn numeric. Return period \code{[a]}.
-#' @param uc (optional) logical. Consider overall ucties, as proposed in
+#' @param uc (optional) logical. Consider overall uncertainties, as proposed in
 #'     Malitz & Ertel (2015)?
 #'
 #' @return units. Precipitation depth \code{[mm]}.

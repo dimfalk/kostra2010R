@@ -14,7 +14,7 @@ as provided by \code{get_stats()}.}
 
 \item{tn}{numeric. Return period \code{[a]}.}
 
-\item{uc}{(optional) logical. Consider overall ucties, as proposed in
+\item{uc}{(optional) logical. Consider overall uncertainties, as proposed in
 Malitz & Ertel (2015)?}
 }
 \value{
