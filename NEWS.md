@@ -1,4 +1,4 @@
-# version 0.8.4
+# version 0.8.5
 
 ## features
 
@@ -8,6 +8,7 @@
 - `calc_designstorm()` now allows generation of modelled rainfall from statistical precipitation
 - `get_returnp()` now allows interpolation of return periods with `interpolate = TRUE`
 - `get_depth()` now allows to consider uncertainties with `uc = TRUE`
+- `get_stats()` now optionally return precipitation yield values with `hn = FALSE`
 
 
 ## enhancements
