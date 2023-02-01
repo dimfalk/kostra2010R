@@ -47,7 +47,7 @@ test_that("All return periods are appended as attributes.", {
   expect_equal(attr(kostra_hn, "returnperiods_a"), rperiods)
 })
 
-test_that("Types are as expected", {
+test_that("Types are as expected.", {
 
   kostra_hn <- get_stats("49011")
 
