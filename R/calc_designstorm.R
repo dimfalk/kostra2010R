@@ -16,17 +16,17 @@
 #' @examples
 #' kostra <- get_stats("49011")
 #'
-#' calc_designstorm(kostra, tn = 20, d = 60, type = "EulerII")
+#' calc_designstorm(kostra, d = 60, tn = 20, type = "EulerII")
 calc_designstorm <- function(x = NULL,
-                             tn = NULL,
                              d = NULL,
+                             tn = NULL,
                              type = NULL) {
 
   # debugging ------------------------------------------------------------------
 
   # x <- kostra
-  # tn <- 20
   # d <- 60
+  # tn <- 20
   # type <- "EulerII"
 
   # check arguments ------------------------------------------------------------

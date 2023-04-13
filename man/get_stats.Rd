@@ -4,12 +4,12 @@
 \alias{get_stats}
 \title{Get cell-specific statistics from the KOSTRA-DWD-2010R dataset}
 \usage{
-get_stats(x = NULL, hn = TRUE)
+get_stats(x = NULL, as_depth = TRUE)
 }
 \arguments{
 \item{x}{character. Relevant "INDEX_RC" field to be queried.}
 
-\item{hn}{logical. Returns precipitation depths when \code{TRUE} and precipitation
+\item{as_depth}{logical. Returns precipitation depths when \code{TRUE} and precipitation
 yields when \code{FALSE}.}
 }
 \value{
@@ -21,5 +21,5 @@ Get cell-specific statistics from the KOSTRA-DWD-2010R dataset
 }
 \examples{
 get_stats("49011")
-get_stats("49011", hn = FALSE)
+get_stats("49011", as_depth = FALSE)
 }

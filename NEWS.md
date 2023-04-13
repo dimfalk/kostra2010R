@@ -1,4 +1,4 @@
-# version 0.8.5
+# version 0.8.6
 
 ## features
 
@@ -20,6 +20,7 @@
 - `kostra_dwd_2010r` dataset now has actual `NA` values instead of `-99.9` placeholders
 - general cleaning and harmonization of roxygen2 function documentation
 - `get_centroid()` now makes use of the Nominatim API via `tidygeocoder::geocode()` for forward geocoding instead of using datasets shipped with the package
+- `get_stats()` parameter `hn` renamed to `as_depth` for consistency reasons
 
 
 ## bug fixes 
