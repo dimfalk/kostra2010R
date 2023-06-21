@@ -74,7 +74,7 @@ get_centroid <- function(x = NULL,
 
   if (hits == 0) {
 
-    "Caution: Geocoded `x` does not intersect spatially with KOSTRA-DWD-2010R tiles." |> warning()
+    "Geocoded `x` does not intersect spatially with KOSTRA-DWD-2010R tiles." |> warning()
 
   }
 
