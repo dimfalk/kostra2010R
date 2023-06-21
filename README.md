@@ -17,24 +17,23 @@ coverage](https://codecov.io/gh/dimfalk/kostra2010R/branch/main/graph/badge.svg)
 The main goal of kostra2010R is to provide access to KOSTRA-DWD-2010R
 dataset from within R.
 
-Abstract from the [official dataset
+Abstract (slightly modified) from the [official dataset
 description](https://opendata.dwd.de/climate_environment/CDC/grids_germany/return_periods/precipitation/KOSTRA/KOSTRA_DWD_2010R/gis/DESCRIPTION_gridsgermany_return_periods_precipitation_KOSTRA_KOSTRA_DWD_2010R_gis_en.pdf):
 
-*These vector data sets for GIS contain statistical precipitation values
-as a function of the duration and the return period. The scope of the
-data is the engineering dimensioning of water management structures.
-These include, sewerage networks, sewage treatment plants, pumping
-stations and retention basins. They are also often used for the
-dimensioning of drainage systems and infiltration systems. With the help
-of the data, however, it is also possible to estimate the precipitation
-level of severe heavy precipitation events with regard to their return
-periods. This estimation is often used to assess damage events.*
+*This vector dataset contains statistical precipitation values as a
+function of duration and return period. The scope of the data is the
+engineering dimensioning of water management structures. These include,
+sewerage networks, sewage treatment plants, pumping stations and
+retention basins. They are also often used for the dimensioning of
+drainage and infiltration systems. With the help of the data, however,
+it is also possible to estimate the precipitation level of severe heavy
+precipitation events with regard to their return periods. This
+estimation is often used to assess damage events.*
 
-*The data set contains the vector data sets of all 18 duration levels. A
-vector data set contains the statistical precipitation (hN, design
-precipitation) of the present duration level D for nine return periods
-Tn (1-100 a) for the whole grid spanning 79 × 107 cells. INDEX_RC
-describes the unique identifier of a grid cell.*
+*The dataset encompasses values of statistical precipitation (HN) for 18
+duration levels D (5 min - 3 days) and 9 return periods Tn (1-100 a) for
+the whole grid spanning 79 × 107 cells. INDEX_RC describes the unique
+identifier of a grid cell.*
 
 ## Installation
 
@@ -188,7 +187,7 @@ kostra
 #> 16  1440   24       1    35.9    42.8    46.8    51.9    58.8    65.8    69.8
 #> 17  2880   48       2    44.1    52.2    57      62.9    71      79.1    83.8
 #> 18  4320   72       3    49.8    58.6    63.7    70.2    79      87.7    92.9
-#> # … with 2 more variables: HN_050A <dbl>, HN_100A <dbl>
+#> # ℹ 2 more variables: HN_050A <dbl>, HN_100A <dbl>
 ```
 
 Some describing attributes have been assigned to the tibble.
