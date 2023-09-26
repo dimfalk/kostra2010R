@@ -40,7 +40,7 @@ identifier of a grid cell.*
 You can install the development version of kostra2010R with:
 
 ``` r
-install.packages("devtools")
+# install.packages("devtools")
 devtools::install_github("dimfalk/kostra2010R")
 ```
 
@@ -48,6 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
+#> 0.8.7
 ```
 
 ## Getting started
@@ -109,14 +110,14 @@ postal codes or full addresses to be geocoded via Nominatim API.
 
 ``` r
 # Sf objects created based on Nominatim API response. Internet access required!
-p3 <- get_centroid("52070")
+p3 <- get_centroid("40477")
 p3
 #> Geometry set for 1 feature 
 #> Geometry type: POINT
 #> Dimension:     XY
-#> Bounding box:  xmin: 6.096156 ymin: 50.79107 xmax: 6.096156 ymax: 50.79107
+#> Bounding box:  xmin: 6.784479 ymin: 51.23912 xmax: 6.784479 ymax: 51.23912
 #> Geodetic CRS:  WGS 84
-#> POINT (6.096156 50.79107)
+#> POINT (6.784479 51.23912)
 
 p4 <- get_centroid("Freiburg im Breisgau")
 p4
@@ -147,7 +148,7 @@ get_idx(p1)
 get_idx(p2)
 #> [1] "49011"
 get_idx(p3)
-#> [1] "57002"
+#> [1] "51008"
 get_idx(p4)
 #> [1] "94016"
 get_idx(p5)
