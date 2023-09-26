@@ -1,4 +1,4 @@
-# version 0.8.6
+# version 0.8.7
 
 ## features
 
@@ -8,7 +8,7 @@
 - `calc_designstorm()` now allows generation of modelled rainfall from statistical precipitation
 - `get_returnp()` now allows interpolation of return periods with `interpolate = TRUE`
 - `get_depth()` now allows to consider uncertainties with `uc = TRUE`
-- `get_stats()` now optionally return precipitation yield values with `hn = FALSE`
+- `get_stats()` now optionally return precipitation yield values with `as_depth = FALSE`
 
 
 ## enhancements
@@ -20,7 +20,6 @@
 - `kostra_dwd_2010r` dataset now has actual `NA` values instead of `-99.9` placeholders
 - general cleaning and harmonization of roxygen2 function documentation
 - `get_centroid()` now makes use of the Nominatim API via `tidygeocoder::geocode()` for forward geocoding instead of using datasets shipped with the package
-- `get_stats()` parameter `hn` renamed to `as_depth` for consistency reasons
 
 
 ## bug fixes 
