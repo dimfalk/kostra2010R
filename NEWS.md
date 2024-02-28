@@ -1,4 +1,4 @@
-# version 0.8.7
+# version 0.9.0
 
 ## features
 
@@ -9,6 +9,7 @@
 - `get_returnp()` now allows interpolation of return periods with `interpolate = TRUE`
 - `get_depth()` now allows to consider uncertainties with `uc = TRUE`
 - `get_stats()` now optionally return precipitation yield values with `as_depth = FALSE`
+- `write_stats()` now wraps `write.table()` to facilitate dumping stats to disk
 
 
 ## enhancements
