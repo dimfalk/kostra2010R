@@ -68,7 +68,7 @@ get_depth <- function(x = NULL,
                 "50" = 0.15,
                 "100" = 0.20)
 
-    hn <- c(hn * (1 - p), hn * (1 + p)) |> round(1)
+    hn <- (hn * c(1 - p, 1 + p)) |> round(1)
   }
 
   units::as_units(hn, "mm")
