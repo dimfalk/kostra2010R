@@ -1,4 +1,4 @@
-#' Visualize itensity-duration-frequency curves per grid cell statistics
+#' Visualize intensity-duration-frequency curves per grid cell statistics
 #'
 #' @param x Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
 #'     as provided by `get_stats()`.
