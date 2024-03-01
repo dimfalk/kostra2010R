@@ -48,7 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.9.0
+#> 0.11.0
 ```
 
 ## Getting started
@@ -61,8 +61,8 @@ information (e.g. column 11, row 49). This information can easily be
 used to generate the necessary “INDEX_RC” field.
 
 ``` r
-# Generate "INDEX_RC" based on X and Y information.
-idx_build(col = 11, row = 49)
+# Generate "INDEX_RC" based on row and column information.
+idx_build(row = 49, col = 11)
 #> [1] "49011"
 ```
 
@@ -86,7 +86,7 @@ in terms of return periods.
 
 ``` r
 # Sf objects created based on specified coordinates. Don't forget to pass the CRS.
-p1 <- get_centroid(c(6.09, 50.46), epsg = 4326)
+p1 <- get_centroid(c(6.09, 50.46), crs = "epsg:4326")
 p1
 #> Geometry set for 1 feature 
 #> Geometry type: POINT
@@ -95,7 +95,7 @@ p1
 #> Geodetic CRS:  WGS 84
 #> POINT (6.09 50.46)
 
-p2 <- get_centroid(c(367773, 5703579), epsg = 25832)
+p2 <- get_centroid(c(367773, 5703579), crs = "epsg:25832")
 p2
 #> Geometry set for 1 feature 
 #> Geometry type: POINT
@@ -363,31 +363,16 @@ xts
 
 ### Further utilization
 
-Data can now be visualized via `ggplot2` after a quick wide-to-long
-conversion…
+Data can now be visualized as intensity-duration-frequency curves using
+`plot_idf()`, underpinned by `{ggplot2}`…
 
 ``` r
-library(ggplot2)
-
-# Column name extraction for name/value junction
-cnames <- colnames(kostra)[colnames(kostra) |> stringr::str_detect("HN_*")]
-
-# Making use of tidyr
-longdata <- tidyr::pivot_longer(kostra, cols = all_of(cnames))
-
-# Plot the whole dataset, colors according to return periods
-ggplot(longdata, aes(D_min, value, colour = name)) + 
-  geom_point() +
-  geom_line() +
-  xlab("duration [min]") +
-  ylab("precipitation depth [mm]") +
-  ggtitle(paste0("hN as a function of duration and return periods as per ", attr(kostra, "source")),
-          subtitle = paste0("INDEX_RC: ", attr(kostra, "id")))
+plot_idf(kostra)
 ```
 
 <img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
 
-… or exported to disk using `write_stats()`.
+… or exported to disk using `write_stats()` based on `write.table()`.
 
 ## Contributing
 
