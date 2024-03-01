@@ -57,7 +57,7 @@ library(kostra2010R)
 
 Sometimes identification of grid cells is not accomplished using
 “INDEX_RC” directly but rather using a combination of X and Y
-information (e.g. column 11, row 49). This information can easily be
+information (e.g. row 49, column 11). This information can easily be
 used to generate the necessary “INDEX_RC” field.
 
 ``` r
@@ -363,8 +363,8 @@ xts
 
 ### Further utilization
 
-Data can now be visualized as intensity-duration-frequency curves using
-`plot_idf()`, underpinned by `{ggplot2}`…
+Data can additionally be visualized as intensity-duration-frequency
+curves using `plot_idf()`, underpinned by `{ggplot2}` …
 
 ``` r
 plot_idf(kostra)
