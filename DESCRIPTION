@@ -1,6 +1,6 @@
 Package: kostra2010R
 Title: R Interface for KOSTRA-DWD-2010r Dataset
-Version: 0.10.0
+Version: 0.11.0
 Date: 2024-03-01
 Authors@R: 
     person("Dimitri", "Falk", , "falk.dimitri@eglv.de", role = c("aut", "cre"))
@@ -13,11 +13,13 @@ Depends: R (>= 4.2.0)
 Imports: 
     checkmate,
     dplyr,
+    ggplot2,
     sf,
     stats,
     stringr,
     tibble,
     tidygeocoder,
+    tidyr,
     units,
     xts,
     zoo
