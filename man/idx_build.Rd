@@ -2,21 +2,24 @@
 % Please edit documentation in R/idx_build.R
 \name{idx_build}
 \alias{idx_build}
-\title{Build "INDEX_RC" identifier based on given X and Y information}
+\title{Build "INDEX_RC" identifier based on given row and column information}
 \usage{
-idx_build(col = NULL, row = NULL)
+idx_build(row = NULL, col = NULL)
 }
 \arguments{
-\item{col}{integer. One pick from set {0:78}.}
+\item{row}{integer. Row number, one pick from set {0:106}.}
 
-\item{row}{integer. One pick from set {0:106}.}
+\item{col}{integer. Column number, one pick from set {0:78}.}
 }
 \value{
 character. Unique representation of the relevant "INDEX_RC" field.
 }
 \description{
-Build "INDEX_RC" identifier based on given X and Y information
+Build "INDEX_RC" identifier based on given row and column information
 }
 \examples{
-idx_build(col = 11, row = 49)
+idx_build(row = 49, col = 11)
+}
+\seealso{
+\code{\link[=idx_decompose]{idx_decompose()}}
 }

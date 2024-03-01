@@ -1,4 +1,4 @@
-# version 0.9.2
+# version 0.9.3
 
 ## features
 
@@ -10,6 +10,7 @@
 - `get_depth()` now allows to consider uncertainties with `uc = TRUE`
 - `get_stats()` now optionally return precipitation yield values with `as_depth = FALSE`
 - `write_stats()` now wraps `write.table()` to facilitate dumping stats to disk
+- `plot_idf` now allows to generate itensity-duration-frequency curves per tile
 
 
 ## enhancements
