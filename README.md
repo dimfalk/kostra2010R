@@ -295,9 +295,9 @@ get_returnp(kostra, hn = 72.3, d = 1440, interpolate = TRUE)
 
 ### Return period extrapolation
 
-Since KOSTRA-2010R has an upper limit of Tn = 100 a, we can make use of
-e.g. PEN-LAWA method in order to extrapolate statistical precipitation
-depths for all duration levels.
+Since KOSTRA-DWD-2010R has an upper limit of Tn = 100 a, we can make use
+of e.g. PEN-LAWA method in order to extrapolate statistical
+precipitation depths for all duration levels.
 
 ``` r
 # Output in a separate tibble to not mix up applied methods.
