@@ -34,5 +34,5 @@ Malitz, G. & Ertel, H. (2015): KOSTRA-DWD-2010 -
 Starkniederschlagshöhen für Deutschland (Bezugszeitraum 1951 bis 2010).
 }
 \seealso{
-\link{get_stats}
+\code{\link[=get_stats]{get_stats()}}
 }

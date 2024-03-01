@@ -8,6 +8,8 @@
 #'     duration and return periods for the KOSTRA-DWD-2010R grid cell specified.
 #' @export
 #'
+#' @seealso [idx_build()]
+#'
 #' @examples
 #' get_stats("49011")
 #' get_stats("49011", as_depth = FALSE)

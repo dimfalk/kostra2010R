@@ -23,3 +23,6 @@ Get cell-specific statistics from the KOSTRA-DWD-2010R dataset
 get_stats("49011")
 get_stats("49011", as_depth = FALSE)
 }
+\seealso{
+\code{\link[=idx_build]{idx_build()}}
+}

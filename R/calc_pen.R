@@ -7,7 +7,7 @@
 #'     duration and return periods.
 #' @export
 #'
-#' @seealso \link{get_stats}
+#' @seealso [get_stats()]
 #'
 #' @references
 #' Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).\cr

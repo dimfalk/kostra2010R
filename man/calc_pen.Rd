@@ -27,5 +27,5 @@ Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).\c
 Verworn & Draschoff (2008): PEN-Erweiterung.
 }
 \seealso{
-\link{get_stats}
+\code{\link[=get_stats]{get_stats()}}
 }

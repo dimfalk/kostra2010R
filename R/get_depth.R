@@ -10,7 +10,7 @@
 #' @return units. Precipitation depth \code{[mm]}.
 #' @export
 #'
-#' @seealso \link{get_stats}
+#' @seealso [get_stats()]
 #'
 #' @references
 #' Malitz, G. & Ertel, H. (2015): KOSTRA-DWD-2010 -
