@@ -11,8 +11,8 @@ coverage](https://codecov.io/gh/dimfalk/kostra2010R/branch/main/graph/badge.svg)
 
 <!-- badges: end -->
 
-— As of 01.01.2023, kostra2010R is officially replaced by kostra2020
-(see [dimfalk/kostra2020](https://github.com/dimfalk/kostra2020)). —
+— As of 01.01.2023, kostra2010R is officially replaced by
+[kostra2020](https://github.com/dimfalk/kostra2020). —
 
 The main goal of kostra2010R is to provide access to KOSTRA-DWD-2010R
 dataset from within R.
