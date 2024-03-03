@@ -217,7 +217,7 @@ xts
 
 Data can additionally be visualized as intensity-duration-frequency curves using `plot_idf()`, underpinned by `{ggplot2}` ...
 
-```{r, fig.width = 8}
+```{r, fig.width = 9}
 plot_idf(kostra, log10 = TRUE)
 ```
 
