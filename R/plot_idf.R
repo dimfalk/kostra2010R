@@ -124,7 +124,8 @@ plot_idf <- function(x = NULL,
 
     gg <- gg + ggplot2::scale_x_continuous(trans = "log10",
                                            breaks = attr(x, "durations_min"),
-                                           labels = attr(x, "durations_min"))
+                                           labels = attr(x, "durations_min"),
+                                           guide = ggplot2::guide_axis(angle = 90))
   }
 
   # return object
