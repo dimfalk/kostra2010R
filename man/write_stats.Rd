@@ -10,7 +10,7 @@ write_stats(x = NULL, file = NULL)
 \item{x}{Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
 as provided by \code{get_stats()}.}
 
-\item{file}{character. Filename with csv extension to be used for data output.}
+\item{file}{(optional) character. Filename with csv extension to be used for data output.}
 }
 \description{
 Write cell-specific statistics from KOSTRA-DWD-2010R dataset to disk

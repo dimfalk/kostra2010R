@@ -2,7 +2,7 @@
 #'
 #' @param x Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
 #'     as provided by `get_stats()`.
-#' @param file character. Filename with csv extension to be used for data output.
+#' @param file (optional) character. Filename with csv extension to be used for data output.
 #'
 #' @export
 #'
