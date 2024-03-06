@@ -12,6 +12,11 @@ test_that("Output class is as expected.", {
 
 
 
+  if (!webshot::is_phantomjs_installed()) {
+
+    webshot::install_phantomjs()
+  }
+
   filename <- "kostra2010R_49011.png"
 
   m3 <- view_spatial("49011", file = filename)
