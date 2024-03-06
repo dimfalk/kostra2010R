@@ -16,5 +16,5 @@ logical.
 Check whether given "INDEX_RC" is present in KOSTRA-DWD-2010R dataset
 }
 \examples{
-idx_exists("49011")
+idx_exists("42016")
 }

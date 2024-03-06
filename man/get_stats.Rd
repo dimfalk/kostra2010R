@@ -20,8 +20,8 @@ duration and return period for the KOSTRA-DWD-2010R grid cell specified.
 Get cell-specific statistics from KOSTRA-DWD-2010R dataset
 }
 \examples{
-get_stats("49011")
-get_stats("49011", as_depth = FALSE)
+get_stats("42016")
+get_stats("42016", as_depth = FALSE)
 }
 \seealso{
 \code{\link[=idx_build]{idx_build()}}

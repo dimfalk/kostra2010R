@@ -48,7 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.11.3
+#> 0.12.1
 ```
 
 ## Getting started
@@ -62,8 +62,8 @@ used to generate the necessary “INDEX_RC” field.
 
 ``` r
 # Generate "INDEX_RC" based on row and column information.
-idx_build(row = 49, col = 11)
-#> [1] "49011"
+idx_build(row = 42, col = 16)
+#> [1] "42016"
 ```
 
 If you wanted to check whether this constructed “INDEX_RC” field is
@@ -73,7 +73,7 @@ function.
 
 ``` r
 # Is the following "INDEX_RC" entry present in the dataset?
-idx_exists("49011")
+idx_exists("42016")
 #> [1] TRUE
 ```
 
@@ -115,9 +115,9 @@ p3
 #> Geometry set for 1 feature 
 #> Geometry type: POINT
 #> Dimension:     XY
-#> Bounding box:  xmin: 6.784486 ymin: 51.23912 xmax: 6.784486 ymax: 51.23912
+#> Bounding box:  xmin: 6.784487 ymin: 51.23912 xmax: 6.784487 ymax: 51.23912
 #> Geodetic CRS:  WGS 84
-#> POINT (6.784486 51.23912)
+#> POINT (6.784487 51.23912)
 
 p4 <- get_centroid("Freiburg im Breisgau")
 p4
@@ -164,43 +164,43 @@ specified.
 ``` r
 # Build a tibble containing statistical precipitation depths as a function of 
 # duration and return periods for the grid cell specified.
-kostra <- get_stats("49011")
+stats <- get_stats("42016")
 
-kostra
+stats
 #> # A tibble: 18 × 12
 #>    D_min D_hour D_day HN_001A HN_002A HN_003A HN_005A HN_010A HN_020A HN_030A
 #>    <dbl>  <dbl> <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#>  1     5   NA      NA     5.6     6.9     7.7     8.7    10      11.3    12.1
-#>  2    10   NA      NA     8.6    10.6    11.7    13.1    15.1    17.1    18.2
-#>  3    15   NA      NA    10.5    13      14.4    16.2    18.6    21.1    22.5
-#>  4    20   NA      NA    11.8    14.7    16.4    18.5    21.4    24.3    25.9
-#>  5    30   NA      NA    13.5    17.1    19.2    21.9    25.5    29.1    31.2
-#>  6    45   NA      NA    14.9    19.4    22.1    25.4    29.9    34.4    37.1
-#>  7    60    1      NA    15.7    21      24.1    28      33.3    38.7    41.8
-#>  8    90    1.5    NA    17.4    22.9    26.2    30.2    35.7    41.2    44.4
-#>  9   120    2      NA    18.8    24.4    27.7    31.9    37.5    43.1    46.4
-#> 10   180    3      NA    20.9    26.7    30.1    34.4    40.2    46      49.4
-#> 11   240    4      NA    22.5    28.5    32      36.4    42.3    48.3    51.8
-#> 12   360    6      NA    25      31.2    34.8    39.3    45.5    51.7    55.3
-#> 13   540    9      NA    27.8    34.2    37.9    42.6    49      55.3    59.1
-#> 14   720   12      NA    30      36.5    40.3    45.1    51.6    58.2    62  
-#> 15  1080   18      NA    33.3    40.1    44      49      55.7    62.5    66.4
-#> 16  1440   24       1    35.9    42.8    46.8    51.9    58.8    65.8    69.8
-#> 17  2880   48       2    44.1    52.2    57      62.9    71      79.1    83.8
-#> 18  4320   72       3    49.8    58.6    63.7    70.2    79      87.7    92.9
+#>  1     5   NA      NA     4.9     6.6     7.6     8.9    10.6    12.3    13.3
+#>  2    10   NA      NA     7.9    10.1    11.4    13.1    15.3    17.5    18.8
+#>  3    15   NA      NA     9.8    12.4    14      15.9    18.5    21.1    22.7
+#>  4    20   NA      NA    11.2    14.1    15.8    18      20.9    23.9    25.6
+#>  5    30   NA      NA    13      16.4    18.4    21      24.4    27.9    29.9
+#>  6    45   NA      NA    14.6    18.6    21      23.9    28      32      34.4
+#>  7    60    1      NA    15.5    20      22.7    26      30.6    35.1    37.7
+#>  8    90    1.5    NA    16.8    21.8    24.6    28.3    33.2    38.1    41  
+#>  9   120    2      NA    17.8    23.1    26.1    30      35.2    40.5    43.5
+#> 10   180    3      NA    19.3    25      28.4    32.6    38.3    44      47.3
+#> 11   240    4      NA    20.5    26.6    30.1    34.6    40.6    46.7    50.2
+#> 12   360    6      NA    22.2    28.8    32.7    37.6    44.1    50.7    54.6
+#> 13   540    9      NA    24.1    31.3    35.5    40.8    48      55.2    59.4
+#> 14   720   12      NA    25.6    33.2    37.7    43.3    50.9    58.5    63  
+#> 15  1080   18      NA    27.7    36      40.9    47      55.3    63.6    68.5
+#> 16  1440   24       1    29.4    38.2    43.4    49.9    58.7    67.5    72.7
+#> 17  2880   48       2    36.5    46.3    52      59.3    69.1    78.9    84.6
+#> 18  4320   72       3    41.4    51.8    57.9    65.5    75.9    86.3    92.4
 #> # ℹ 2 more variables: HN_050A <dbl>, HN_100A <dbl>
 ```
 
 Some describing attributes have been assigned to the tibble.
 
 ``` r
-attr(kostra, "id")
-#> [1] "49011"
-attr(kostra, "period")
+attr(stats, "id")
+#> [1] "42016"
+attr(stats, "period")
 #> [1] "1951-01-01 +01" "2010-12-31 +01"
-attr(kostra, "returnperiods_a")
+attr(stats, "returnperiods_a")
 #> [1]   1   2   3   5  10  20  30  50 100
-attr(kostra, "source")
+attr(stats, "source")
 #> [1] "KOSTRA-DWD-2010R"
 ```
 
@@ -214,8 +214,8 @@ function helping you out.
 ``` r
 # So we are interested in the rainfall amount [mm] for an event lasting 240 min 
 # with a return period of 100 a.
-get_depth(kostra, d = 240, tn = 100)
-#> 62.1 [mm]
+get_depth(stats, d = 240, tn = 100)
+#> 60.7 [mm]
 ```
 
 In order to respect statistical uncertainties, as proposed in Malitz &
@@ -225,9 +225,9 @@ around the single value above.
 
 ``` r
 # Same data, but with uncertainties considered.
-get_depth(kostra, d = 240, tn = 100, uc = TRUE)
+get_depth(stats, d = 240, tn = 100, uc = TRUE)
 #> Units: [mm]
-#> [1] 49.7 74.5
+#> [1] 48.6 72.8
 ```
 
 If you need precipitation yield values \[l/(s\*ha)\] instead of
@@ -248,8 +248,8 @@ Finally, we want to determine the return period according to the dataset
 for a precipitation depth and duration given.
 
 ``` r
-# Let's assume we measured 72.3 mm in 24 h.
-get_returnp(kostra, hn = 72.3, d = 1440)
+# Let's assume we measured 75.2 mm in 24 h.
+get_returnp(stats, hn = 75.2, d = 1440)
 #> Units: [a]
 #> [1] 30 50
 ```
@@ -262,21 +262,21 @@ The following edge cases are to be mentioned:
 
 ``` r
 # 1) In case a class boundary is hit, the return period is replicated.
-get_returnp(kostra, hn = 42.8, d = 1440)
+get_returnp(stats, hn = 38.2, d = 1440)
 #> Units: [a]
 #> [1] 2 2
 ```
 
 ``` r
 # 2) In case the return period tn is smaller than 1, interval opens with 0.
-get_returnp(kostra, hn = 30.2, d = 1440)
+get_returnp(stats, hn = 26.4, d = 1440)
 #> Units: [a]
 #> [1] 0 1
 ```
 
 ``` r
 # 3) In case the return period tn is larger than 100, interval closes with Inf.
-get_returnp(kostra, hn = 86.3, d = 1440)
+get_returnp(stats, hn = 92.8, d = 1440)
 #> Units: [a]
 #> [1] 100 Inf
 ```
@@ -289,8 +289,8 @@ using linear interpolation between adjacent nodes:
 
 ``` r
 # Using the same example as above, previously resulting in 30 a < tn < 50 a.
-get_returnp(kostra, hn = 72.3, d = 1440, interpolate = TRUE)
-#> 39.9 [a]
+get_returnp(stats, hn = 75.2, d = 1440, interpolate = TRUE)
+#> 37.7 [a]
 ```
 
 ### Return period extrapolation
@@ -301,36 +301,36 @@ precipitation depths for all duration levels.
 
 ``` r
 # Output in a separate tibble to not mix up applied methods.
-pen <- calc_pen(kostra) 
+pen <- calc_pen(stats) 
 
 pen
 #> # A tibble: 18 × 9
 #>    D_min D_hour D_day HN_200A HN_500A HN_1000A HN_2000A HN_5000A HN_10000A
 #>    <dbl>  <dbl> <dbl>   <dbl>   <dbl>    <dbl>    <dbl>    <dbl>     <dbl>
-#>  1     5   NA      NA    19.1    21.6     23.4     25.2     27.7      29.5
-#>  2    10   NA      NA    28.7    32.3     35       37.7     41.4      44.1
-#>  3    15   NA      NA    35.6    40.1     43.5     46.9     51.5      54.9
-#>  4    20   NA      NA    41.1    46.3     50.3     54.3     59.6      63.5
-#>  5    30   NA      NA    49.9    56.5     61.4     66.4     72.9      77.9
-#>  6    45   NA      NA    60.1    68.2     74.3     80.4     88.5      94.6
-#>  7    60    1      NA    68.3    77.7     84.7     91.8    101.      108. 
-#>  8    90    1.5    NA    72.1    81.8     89.2     96.6    106.      114. 
-#>  9   120    2      NA    75      85.1     92.7    100.     110.      118  
-#> 10   180    3      NA    79.5    89.9     97.9    106.     116.      124. 
-#> 11   240    4      NA    82.7    93.5    102.     110.     121.      129. 
-#> 12   360    6      NA    87.7    99      108.     116.     127.      136. 
-#> 13   540    9      NA    93     105.     114.     123.     134.      143. 
-#> 14   720   12      NA    97.1   109.     118.     128.     140.      149. 
-#> 15  1080   18      NA   103.    116      126.     135.     148.      158. 
-#> 16  1440   24       1   108.    121.     131.     141      154.      164  
-#> 17  2880   48       2   129.    145.     156.     168.     184.      195. 
-#> 18  4320   72       3   142.    159.     172.     185.     202.      215.
+#>  1     5   NA      NA    21.7    24.7     27       29.2     32.2      34.5
+#>  2    10   NA      NA    30.3    34.3     37.3     40.3     44.3      47.4
+#>  3    15   NA      NA    36.2    41       44.5     48.1     52.9      56.5
+#>  4    20   NA      NA    40.9    46.2     50.2     54.2     59.6      63.6
+#>  5    30   NA      NA    47.8    54       58.8     63.5     69.7      74.5
+#>  6    45   NA      NA    55.2    62.5     67.9     73.4     80.7      86.2
+#>  7    60    1      NA    60.9    69       75.1     81.2     89.4      95.5
+#>  8    90    1.5    NA    66.2    75       81.7     88.4     97.2     104. 
+#>  9   120    2      NA    70.2    79.6     86.7     93.8    103.      110. 
+#> 10   180    3      NA    76.4    86.6     94.3    102      112.      120. 
+#> 11   240    4      NA    81      91.8    100      108.     119       127. 
+#> 12   360    6      NA    88.3   100.     109      118.     130.      139. 
+#> 13   540    9      NA    95.9   109.     118.     128.     141.      151. 
+#> 14   720   12      NA   102.    115.     126.     136.     150.      160. 
+#> 15  1080   18      NA   111.    126.     137.     148      163.      174  
+#> 16  1440   24       1   118.    133.     145.     157.     173.      185. 
+#> 17  2880   48       2   135.    153      166.     180.     198.      211  
+#> 18  4320   72       3   147.    166.     180.     194.     213.      228.
 ```
 
 ``` r
 # Former attribute names are preserved.
 attr(pen, "id")
-#> [1] "49011"
+#> [1] "42016"
 attr(pen, "returnperiods_a")
 #> [1]   200   500  1000  2000  5000 10000
 ```
@@ -343,22 +343,22 @@ implemented.
 
 ``` r
 # Euler Type II design storm with a duration of 60 minutes and a return period of 100 a.
-xts <- calc_designstorm(kostra, d = 60, tn = 100, type = "EulerII")
+xts <- calc_designstorm(stats, d = 60, tn = 100, type = "EulerII")
 
 xts
-#>                     [,1]
-#> 2000-01-01 00:00:00  4.1
-#> 2000-01-01 00:05:00  5.2
-#> 2000-01-01 00:10:00  7.2
-#> 2000-01-01 00:15:00 14.4
-#> 2000-01-01 00:20:00  3.3
-#> 2000-01-01 00:25:00  3.3
-#> 2000-01-01 00:30:00  2.5
-#> 2000-01-01 00:35:00  2.5
-#> 2000-01-01 00:40:00  2.5
-#> 2000-01-01 00:45:00  2.0
-#> 2000-01-01 00:50:00  2.0
-#> 2000-01-01 00:55:00  2.0
+#>                      [,1]
+#> 2000-01-01 00:00:00  3.50
+#> 2000-01-01 00:05:00  4.50
+#> 2000-01-01 00:10:00  6.50
+#> 2000-01-01 00:15:00 16.20
+#> 2000-01-01 00:20:00  2.60
+#> 2000-01-01 00:25:00  2.60
+#> 2000-01-01 00:30:00  1.83
+#> 2000-01-01 00:35:00  1.83
+#> 2000-01-01 00:40:00  1.83
+#> 2000-01-01 00:45:00  1.40
+#> 2000-01-01 00:50:00  1.40
+#> 2000-01-01 00:55:00  1.40
 ```
 
 ### Further utilization
@@ -367,7 +367,7 @@ Data can additionally be visualized as intensity-duration-frequency
 curves using `plot_idf()`, underpinned by `{ggplot2}` …
 
 ``` r
-plot_idf(kostra, log10 = TRUE)
+plot_idf(stats, log10 = TRUE)
 ```
 
 <img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />

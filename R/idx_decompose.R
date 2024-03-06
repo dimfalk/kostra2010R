@@ -8,12 +8,12 @@
 #' @seealso [idx_build()]
 #'
 #' @examples
-#' idx_decompose(x = "49011")
+#' idx_decompose(x = "42016")
 idx_decompose <- function(x = NULL) {
 
   # debugging ------------------------------------------------------------------
 
-  # x = "49011"
+  # x = "42016"
 
   # check arguments ------------------------------------------------------------
 

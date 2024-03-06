@@ -14,14 +14,14 @@
 #' Verworn & Draschoff (2008): PEN-Erweiterung.
 #'
 #' @examples
-#' kostra <- get_stats("49011")
+#' stats <- get_stats("42016")
 #'
-#' calc_pen(kostra)
+#' calc_pen(stats)
 calc_pen <- function(x = NULL) {
 
   # debugging ------------------------------------------------------------------
 
-  # x <- get_stats("49011")
+  # x <- get_stats("42016")
 
   # check arguments ------------------------------------------------------------
 

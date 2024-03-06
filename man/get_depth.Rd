@@ -24,10 +24,10 @@ units. Precipitation depth \code{[mm]}.
 Get precipitation depth for a specified duration level and return period
 }
 \examples{
-kostra <- get_stats("49011")
+stats <- get_stats("42016")
 
-get_depth(kostra, d = 60, tn = 50)
-get_depth(kostra, d = 60, tn = 50, uc = TRUE)
+get_depth(stats, d = 60, tn = 50)
+get_depth(stats, d = 60, tn = 50, uc = TRUE)
 }
 \references{
 Malitz, G. & Ertel, H. (2015): KOSTRA-DWD-2010 -

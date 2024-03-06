@@ -15,10 +15,10 @@
 #' @seealso [get_stats()]
 #'
 #' @examples
-#' kostra <- get_stats("49011")
+#' stats <- get_stats("42016")
 #'
-#' get_returnp(kostra, hn = 69.3, d = 1440)
-#' get_returnp(kostra, hn = 69.3, d = 1440, interpolate = TRUE)
+#' get_returnp(stats, hn = 69.3, d = 1440)
+#' get_returnp(stats, hn = 69.3, d = 1440, interpolate = TRUE)
 get_returnp <- function(x = NULL,
                         hn = NULL,
                         d = NULL,

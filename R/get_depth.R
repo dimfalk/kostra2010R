@@ -17,10 +17,10 @@
 #'     Starkniederschlagshöhen für Deutschland (Bezugszeitraum 1951 bis 2010).
 #'
 #' @examples
-#' kostra <- get_stats("49011")
+#' stats <- get_stats("42016")
 #'
-#' get_depth(kostra, d = 60, tn = 50)
-#' get_depth(kostra, d = 60, tn = 50, uc = TRUE)
+#' get_depth(stats, d = 60, tn = 50)
+#' get_depth(stats, d = 60, tn = 50, uc = TRUE)
 get_depth <- function(x = NULL,
                       d = NULL,
                       tn = NULL,
@@ -28,7 +28,7 @@ get_depth <- function(x = NULL,
 
   # debugging ------------------------------------------------------------------
 
-  # x <- get_stats("49011")
+  # x <- get_stats("42016")
   # d <- 60
   # tn <- 50
   # uc <- TRUE

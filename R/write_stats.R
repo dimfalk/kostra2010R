@@ -10,18 +10,18 @@
 #'
 #' @examples
 #' \dontrun{
-#' kostra <- get_stats("49011")
+#' stats <- get_stats("42016")
 #'
-#' write_stats(kostra)
-#' write_stats(kostra, file = "kostra2010R_hN_49011.csv")
+#' write_stats(stats)
+#' write_stats(stats, file = "kostra2010R_hN_42016.csv")
 #' }
 write_stats <- function(x = NULL,
                         file = NULL) {
 
   # debugging ------------------------------------------------------------------
 
-  # x <- get_stats("49011")
-  # file <- "kostra2010R_hN_49011.csv"
+  # x <- get_stats("42016")
+  # file <- "kostra2010R_hN_42016.csv"
 
   # check arguments ------------------------------------------------------------
 

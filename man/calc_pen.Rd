@@ -18,9 +18,9 @@ duration and return periods.
 Extrapolation of precipitation depths for Tn > 100 a according to PEN-LAWA
 }
 \examples{
-kostra <- get_stats("49011")
+stats <- get_stats("42016")
 
-calc_pen(kostra)
+calc_pen(stats)
 }
 \references{
 Verworn & Kummer (2006): Praxisrelevante Extremwerte des Niederschlages (PEN).\cr

@@ -23,9 +23,9 @@ An xts object.
 Design storm calculation based on statistical precipitation depths
 }
 \examples{
-kostra <- get_stats("49011")
+stats <- get_stats("42016")
 
-calc_designstorm(kostra, d = 60, tn = 20, type = "EulerII")
+calc_designstorm(stats, d = 60, tn = 20, type = "EulerII")
 }
 \seealso{
 \code{\link[=get_stats]{get_stats()}}

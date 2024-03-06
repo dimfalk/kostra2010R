@@ -18,7 +18,7 @@ character. Unique representation of the relevant "INDEX_RC" field.
 Build "INDEX_RC" identifier based on given row and column information
 }
 \examples{
-idx_build(row = 49, col = 11)
+idx_build(row = 42, col = 16)
 }
 \seealso{
 \code{\link[=idx_decompose]{idx_decompose()}}

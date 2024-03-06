@@ -54,14 +54,14 @@ Sometimes identification of grid cells is not accomplished using "INDEX_RC" dire
 
 ```{r}
 # Generate "INDEX_RC" based on row and column information.
-idx_build(row = 49, col = 11)
+idx_build(row = 42, col = 16)
 ```
 
 If you wanted to check whether this constructed "INDEX_RC" field is really present in the dataset (or you found an ID in some report and are not sure, if it is still being used), make use of the following function.
 
 ```{r}
 # Is the following "INDEX_RC" entry present in the dataset?
-idx_exists("49011")
+idx_exists("42016")
 ```
 
 ### Get "INDEX_RC" based on spatial information
@@ -109,18 +109,18 @@ Now that we have messed a little with the grid cell identifiers, let's get a sne
 ```{r}
 # Build a tibble containing statistical precipitation depths as a function of 
 # duration and return periods for the grid cell specified.
-kostra <- get_stats("49011")
+stats <- get_stats("42016")
 
-kostra
+stats
 ```
 
 Some describing attributes have been assigned to the tibble.
 
 ```{r}
-attr(kostra, "id")
-attr(kostra, "period")
-attr(kostra, "returnperiods_a")
-attr(kostra, "source")
+attr(stats, "id")
+attr(stats, "period")
+attr(stats, "returnperiods_a")
+attr(stats, "source")
 ```
 
 ### Get precipitation depths, calculate precipitation yield
@@ -130,14 +130,14 @@ If we now wanted to know the statistical precipitation depth e.g. for an event o
 ```{r}
 # So we are interested in the rainfall amount [mm] for an event lasting 240 min 
 # with a return period of 100 a.
-get_depth(kostra, d = 240, tn = 100)
+get_depth(stats, d = 240, tn = 100)
 ```
 
 In order to respect statistical uncertainties, as proposed in Malitz & Ertel (2015), ranging between 10 % and 20 % as a function of the chosen return period, make use of `uc = TRUE` to get an interval centered around the single value above.
 
 ```{r}
 # Same data, but with uncertainties considered.
-get_depth(kostra, d = 240, tn = 100, uc = TRUE)
+get_depth(stats, d = 240, tn = 100, uc = TRUE)
 ```
 
 If you need precipitation yield values [l/(s\*ha)] instead of precipitation depth [mm] or vice versa, make use of the following helper function.
@@ -153,8 +153,8 @@ as_depth(43.1, d = 240)
 Finally, we want to determine the return period according to the dataset for a precipitation depth and duration given.
 
 ```{r}
-# Let's assume we measured 72.3 mm in 24 h.
-get_returnp(kostra, hn = 72.3, d = 1440)
+# Let's assume we measured 75.2 mm in 24 h.
+get_returnp(stats, hn = 75.2, d = 1440)
 ```
 
 Accordingly, the approximate corresponding recurrence interval resp. annuality of this event amounts to something between 30 and 50 years as per KOSTRA-DWD-2010R.
@@ -163,17 +163,17 @@ The following edge cases are to be mentioned:
 
 ```{r}
 # 1) In case a class boundary is hit, the return period is replicated.
-get_returnp(kostra, hn = 42.8, d = 1440)
+get_returnp(stats, hn = 38.2, d = 1440)
 ```
 
 ```{r}
 # 2) In case the return period tn is smaller than 1, interval opens with 0.
-get_returnp(kostra, hn = 30.2, d = 1440)
+get_returnp(stats, hn = 26.4, d = 1440)
 ```
 
 ```{r}
 # 3) In case the return period tn is larger than 100, interval closes with Inf.
-get_returnp(kostra, hn = 86.3, d = 1440)
+get_returnp(stats, hn = 92.8, d = 1440)
 ```
 
 ### Return period interpolation
@@ -182,7 +182,7 @@ Although it may be somewhat questionable from a scientific perspective, you migh
 
 ```{r}
 # Using the same example as above, previously resulting in 30 a < tn < 50 a.
-get_returnp(kostra, hn = 72.3, d = 1440, interpolate = TRUE)
+get_returnp(stats, hn = 75.2, d = 1440, interpolate = TRUE)
 ```
 
 ### Return period extrapolation
@@ -191,7 +191,7 @@ Since KOSTRA-DWD-2010R has an upper limit of Tn = 100 a, we can make use of e.g.
 
 ```{r}
 # Output in a separate tibble to not mix up applied methods.
-pen <- calc_pen(kostra) 
+pen <- calc_pen(stats) 
 
 pen
 ```
@@ -208,7 +208,7 @@ Furthermore, statistical precipitation depths can be used to create design storm
 
 ```{r, warning = FALSE}
 # Euler Type II design storm with a duration of 60 minutes and a return period of 100 a.
-xts <- calc_designstorm(kostra, d = 60, tn = 100, type = "EulerII")
+xts <- calc_designstorm(stats, d = 60, tn = 100, type = "EulerII")
 
 xts
 ```
@@ -218,7 +218,7 @@ xts
 Data can additionally be visualized as intensity-duration-frequency curves using `plot_idf()`, underpinned by `{ggplot2}` ...
 
 ```{r, fig.width = 9}
-plot_idf(kostra, log10 = TRUE)
+plot_idf(stats, log10 = TRUE)
 ```
 
 ... or exported to disk using `write_stats()` based on `write.table()`.
