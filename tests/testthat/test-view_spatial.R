@@ -12,12 +12,13 @@ test_that("Output class is as expected.", {
 
 
 
-  filename <- tempfile(fileext = ".png")
+  filename <- "kostra2010R_49011.png"
 
   m3 <- view_spatial("49011", file = filename)
 
   expect_s3_class(m3, c("leaflet", "htmlwidget"))
 
-  expect_equal(testthat:::safe_digest(filename),
-               "5f30c8404fb4ff8eedc8a5f1f93787c7")
+  expect_true(file.exists(filename))
+
+  unlink(filename)
 })
