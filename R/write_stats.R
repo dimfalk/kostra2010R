@@ -1,4 +1,4 @@
-#' Write cell-specific statistics from the KOSTRA-DWD-2010R dataset to disk
+#' Write cell-specific statistics from KOSTRA-DWD-2010R dataset to disk
 #'
 #' @param x Tibble containing grid cell statistics from KOSTRA-DWD-2010R,
 #'     as provided by `get_stats()`.
@@ -13,7 +13,7 @@
 #' kostra <- get_stats("49011")
 #'
 #' write_stats(kostra)
-#' write_stats(kostra, file = tempfile(fileext = ".csv"))
+#' write_stats(kostra, file = "kostra2010R_hN_49011.csv")
 #' }
 write_stats <- function(x = NULL,
                         file = NULL) {

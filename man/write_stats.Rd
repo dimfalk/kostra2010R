@@ -2,7 +2,7 @@
 % Please edit documentation in R/write_stats.R
 \name{write_stats}
 \alias{write_stats}
-\title{Write cell-specific statistics from the KOSTRA-DWD-2010R dataset to disk}
+\title{Write cell-specific statistics from KOSTRA-DWD-2010R dataset to disk}
 \usage{
 write_stats(x = NULL, file = NULL)
 }
@@ -13,14 +13,14 @@ as provided by \code{get_stats()}.}
 \item{file}{character. Filename with csv extension to be used for data output.}
 }
 \description{
-Write cell-specific statistics from the KOSTRA-DWD-2010R dataset to disk
+Write cell-specific statistics from KOSTRA-DWD-2010R dataset to disk
 }
 \examples{
 \dontrun{
 kostra <- get_stats("49011")
 
 write_stats(kostra)
-write_stats(kostra, file = tempfile(fileext = ".csv"))
+write_stats(kostra, file = "kostra2010R_hN_49011.csv")
 }
 }
 \seealso{

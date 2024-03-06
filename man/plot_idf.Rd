@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_idf.R
 \name{plot_idf}
 \alias{plot_idf}
-\title{Visualize intensity-duration-frequency curves per grid cell statistics}
+\title{Visualize intensity-duration-frequency curves per cell-specific statistics from KOSTRA-DWD-2010R dataset}
 \usage{
 plot_idf(x = NULL, tn = NULL, log10 = FALSE)
 }
@@ -18,7 +18,7 @@ as provided by \code{get_stats()}.}
 ggplot object.
 }
 \description{
-Visualize intensity-duration-frequency curves per grid cell statistics
+Visualize intensity-duration-frequency curves per cell-specific statistics from KOSTRA-DWD-2010R dataset
 }
 \examples{
 get_stats("49011") |> plot_idf()
