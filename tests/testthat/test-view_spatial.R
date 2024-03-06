@@ -18,5 +18,6 @@ test_that("Output class is as expected.", {
 
   expect_s3_class(m3, c("leaflet", "htmlwidget"))
 
-  expect_true(file.exists(filename))
+  expect_equal(testthat:::safe_digest(filename),
+               "5f30c8404fb4ff8eedc8a5f1f93787c7")
 })
