@@ -6,21 +6,21 @@ d <- c(5, 10, 15, 20, 30, 45, 60, 90, 120, 180, 240, 360, 540, 720, 1080, 1440, 
 
 d_pad <- stringr::str_pad(d, width = 4, pad = "0")
 
-files <- paste0("GIS_KOSTRA-DWD-2010R_D", d_pad,".zip")
+fnames <- paste0("GIS_KOSTRA-DWD-2010R_D", d_pad,".zip")
 
-urls <- paste0(base_url, files)
+urls <- paste0(base_url, fnames)
 
 # download and unzip files
-for (i in 1:length(files)) {
+for (i in 1:length(fnames)) {
 
-  utils::download.file(urls[i], files[i])
+  utils::download.file(urls[i], fnames[i])
 
-  utils::unzip(files[i])
+  utils::unzip(fnames[i])
 
-  unlink(files[i])
+  unlink(fnames[i])
 }
 
-files_shp <- list.files(pattern = "*.shp", recursive = TRUE)
+files_shp <- list.files(pattern = "shp$", recursive = TRUE)
 
 kostra_dwd_2010r <- list()
 
@@ -45,4 +45,4 @@ for (i in 1:length(d)) {
 
 usethis::use_data(kostra_dwd_2010r, overwrite = TRUE)
 
-unlink(files |> stringr::str_sub(1, -5), recursive = TRUE)
+stringr::str_sub(fnames, 1, -5) |> unlink(recursive = TRUE)
