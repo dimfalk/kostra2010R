@@ -20,20 +20,20 @@ dataset from within R.
 Abstract (slightly modified) from the [official dataset
 description](https://opendata.dwd.de/climate_environment/CDC/grids_germany/return_periods/precipitation/KOSTRA/KOSTRA_DWD_2010R/gis/DESCRIPTION_gridsgermany_return_periods_precipitation_KOSTRA_KOSTRA_DWD_2010R_gis_en.pdf):
 
-*This vector dataset contains statistical precipitation values as a
-function of duration and return period. The scope of the data is the
-engineering dimensioning of water management structures. These include,
-sewerage networks, sewage treatment plants, pumping stations and
-retention basins. They are also often used for the dimensioning of
-drainage and infiltration systems. With the help of the data, however,
-it is also possible to estimate the precipitation level of severe heavy
-precipitation events with regard to their return periods. This
-estimation is often used to assess damage events.*
+> This vector dataset contains statistical precipitation values as a
+> function of duration and return period. The scope of the data is the
+> engineering dimensioning of water management structures. These
+> include, sewerage networks, sewage treatment plants, pumping stations
+> and retention basins. They are also often used for the dimensioning of
+> drainage and infiltration systems. With the help of the data, however,
+> it is also possible to estimate the precipitation level of severe
+> heavy precipitation events with regard to their return periods. This
+> estimation is often used to assess damage events.
 
-*The dataset encompasses values of statistical precipitation (HN) for 18
-duration levels D (5 min - 3 days) and 9 return periods Tn (1-100 a) for
-the whole grid spanning 79 × 107 cells. INDEX_RC describes the unique
-identifier of a grid cell.*
+> The dataset encompasses values of statistical precipitation (HN) for
+> 18 duration levels D (5 min - 3 days) and 9 return periods Tn (1-100
+> a) for the whole grid spanning 79 × 107 cells. INDEX_RC describes the
+> unique identifier of a grid cell.
 
 ## Installation
 
@@ -48,7 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.12.1
+#> 0.12.2
 ```
 
 ## Getting started
@@ -115,9 +115,9 @@ p3
 #> Geometry set for 1 feature 
 #> Geometry type: POINT
 #> Dimension:     XY
-#> Bounding box:  xmin: 6.784487 ymin: 51.23912 xmax: 6.784487 ymax: 51.23912
+#> Bounding box:  xmin: 6.785413 ymin: 51.23875 xmax: 6.785413 ymax: 51.23875
 #> Geodetic CRS:  WGS 84
-#> POINT (6.784487 51.23912)
+#> POINT (6.785413 51.23875)
 
 p4 <- get_centroid("Freiburg im Breisgau")
 p4
