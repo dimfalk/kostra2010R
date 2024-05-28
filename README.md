@@ -48,7 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.12.2
+#> 0.13.0
 ```
 
 ## Getting started
@@ -94,6 +94,9 @@ p1
 #> Bounding box:  xmin: 6.09 ymin: 50.46 xmax: 6.09 ymax: 50.46
 #> Geodetic CRS:  WGS 84
 #> POINT (6.09 50.46)
+```
+
+``` r
 
 p2 <- get_centroid(c(367773, 5703579), crs = "epsg:25832")
 p2
@@ -118,6 +121,9 @@ p3
 #> Bounding box:  xmin: 6.785413 ymin: 51.23875 xmax: 6.785413 ymax: 51.23875
 #> Geodetic CRS:  WGS 84
 #> POINT (6.785413 51.23875)
+```
+
+``` r
 
 p4 <- get_centroid("Freiburg im Breisgau")
 p4
@@ -127,6 +133,9 @@ p4
 #> Bounding box:  xmin: 7.8494 ymin: 47.99609 xmax: 7.8494 ymax: 47.99609
 #> Geodetic CRS:  WGS 84
 #> POINT (7.8494 47.99609)
+```
+
+``` r
 
 p5 <- get_centroid("Kronprinzenstr. 24, 45128 Essen")
 p5
@@ -145,12 +154,24 @@ relevant grid index.
 # Get indices by topological intersection between location point and grid cells.
 get_idx(p1)
 #> [1] "61002"
+```
+
+``` r
 get_idx(p2)
 #> [1] "49011"
+```
+
+``` r
 get_idx(p3)
 #> [1] "51008"
+```
+
+``` r
 get_idx(p4)
 #> [1] "94016"
+```
+
+``` r
 get_idx(p5)
 #> [1] "49010"
 ```
@@ -196,10 +217,19 @@ Some describing attributes have been assigned to the tibble.
 ``` r
 attr(stats, "id")
 #> [1] "42016"
+```
+
+``` r
 attr(stats, "period")
 #> [1] "1951-01-01 +01" "2010-12-31 +01"
+```
+
+``` r
 attr(stats, "returnperiods_a")
 #> [1]   1   2   3   5  10  20  30  50 100
+```
+
+``` r
 attr(stats, "source")
 #> [1] "KOSTRA-DWD-2010R"
 ```
@@ -237,6 +267,9 @@ helper function.
 ``` r
 as_yield(62.1, d = 240)
 #> 43.1 [L/ha/s]
+```
+
+``` r
 
 as_depth(43.1, d = 240)
 #> 62.1 [mm]
@@ -293,74 +326,6 @@ get_returnp(stats, hn = 75.2, d = 1440, interpolate = TRUE)
 #> 37.7 [a]
 ```
 
-### Return period extrapolation
-
-Since KOSTRA-DWD-2010R has an upper limit of Tn = 100 a, we can make use
-of e.g. PEN-LAWA method in order to extrapolate statistical
-precipitation depths for all duration levels.
-
-``` r
-# Output in a separate tibble to not mix up applied methods.
-pen <- calc_pen(stats) 
-
-pen
-#> # A tibble: 18 × 9
-#>    D_min D_hour D_day HN_200A HN_500A HN_1000A HN_2000A HN_5000A HN_10000A
-#>    <dbl>  <dbl> <dbl>   <dbl>   <dbl>    <dbl>    <dbl>    <dbl>     <dbl>
-#>  1     5   NA      NA    21.7    24.7     27       29.2     32.2      34.5
-#>  2    10   NA      NA    30.3    34.3     37.3     40.3     44.3      47.4
-#>  3    15   NA      NA    36.2    41       44.5     48.1     52.9      56.5
-#>  4    20   NA      NA    40.9    46.2     50.2     54.2     59.6      63.6
-#>  5    30   NA      NA    47.8    54       58.8     63.5     69.7      74.5
-#>  6    45   NA      NA    55.2    62.5     67.9     73.4     80.7      86.2
-#>  7    60    1      NA    60.9    69       75.1     81.2     89.4      95.5
-#>  8    90    1.5    NA    66.2    75       81.7     88.4     97.2     104. 
-#>  9   120    2      NA    70.2    79.6     86.7     93.8    103.      110. 
-#> 10   180    3      NA    76.4    86.6     94.3    102      112.      120. 
-#> 11   240    4      NA    81      91.8    100      108.     119       127. 
-#> 12   360    6      NA    88.3   100.     109      118.     130.      139. 
-#> 13   540    9      NA    95.9   109.     118.     128.     141.      151. 
-#> 14   720   12      NA   102.    115.     126.     136.     150.      160. 
-#> 15  1080   18      NA   111.    126.     137.     148      163.      174  
-#> 16  1440   24       1   118.    133.     145.     157.     173.      185. 
-#> 17  2880   48       2   135.    153      166.     180.     198.      211  
-#> 18  4320   72       3   147.    166.     180.     194.     213.      228.
-```
-
-``` r
-# Former attribute names are preserved.
-attr(pen, "id")
-#> [1] "42016"
-attr(pen, "returnperiods_a")
-#> [1]   200   500  1000  2000  5000 10000
-```
-
-### Design storm generation
-
-Furthermore, statistical precipitation depths can be used to create
-design storm time series data. Currently, Euler Type I + II are
-implemented.
-
-``` r
-# Euler Type II design storm with a duration of 60 minutes and a return period of 100 a.
-xts <- calc_designstorm(stats, d = 60, tn = 100, type = "EulerII")
-
-xts
-#>                      [,1]
-#> 2000-01-01 00:00:00  3.50
-#> 2000-01-01 00:05:00  4.50
-#> 2000-01-01 00:10:00  6.50
-#> 2000-01-01 00:15:00 16.20
-#> 2000-01-01 00:20:00  2.60
-#> 2000-01-01 00:25:00  2.60
-#> 2000-01-01 00:30:00  1.83
-#> 2000-01-01 00:35:00  1.83
-#> 2000-01-01 00:40:00  1.83
-#> 2000-01-01 00:45:00  1.40
-#> 2000-01-01 00:50:00  1.40
-#> 2000-01-01 00:55:00  1.40
-```
-
 ### Further utilization
 
 Data can additionally be visualized as intensity-duration-frequency
@@ -370,7 +335,7 @@ curves using `plot_idf()`, underpinned by `{ggplot2}` …
 plot_idf(stats, log10 = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
 
 … or exported to disk using `write_stats()` based on `write.table()`.
 
