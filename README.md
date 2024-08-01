@@ -48,7 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.13.0
+#> 0.13.2
 ```
 
 ## Getting started
@@ -94,9 +94,6 @@ p1
 #> Bounding box:  xmin: 6.09 ymin: 50.46 xmax: 6.09 ymax: 50.46
 #> Geodetic CRS:  WGS 84
 #> POINT (6.09 50.46)
-```
-
-``` r
 
 p2 <- get_centroid(c(367773, 5703579), crs = "epsg:25832")
 p2
@@ -121,9 +118,6 @@ p3
 #> Bounding box:  xmin: 6.785413 ymin: 51.23875 xmax: 6.785413 ymax: 51.23875
 #> Geodetic CRS:  WGS 84
 #> POINT (6.785413 51.23875)
-```
-
-``` r
 
 p4 <- get_centroid("Freiburg im Breisgau")
 p4
@@ -133,9 +127,6 @@ p4
 #> Bounding box:  xmin: 7.8494 ymin: 47.99609 xmax: 7.8494 ymax: 47.99609
 #> Geodetic CRS:  WGS 84
 #> POINT (7.8494 47.99609)
-```
-
-``` r
 
 p5 <- get_centroid("Kronprinzenstr. 24, 45128 Essen")
 p5
@@ -154,24 +145,12 @@ relevant grid index.
 # Get indices by topological intersection between location point and grid cells.
 get_idx(p1)
 #> [1] "61002"
-```
-
-``` r
 get_idx(p2)
 #> [1] "49011"
-```
-
-``` r
 get_idx(p3)
 #> [1] "51008"
-```
-
-``` r
 get_idx(p4)
 #> [1] "94016"
-```
-
-``` r
 get_idx(p5)
 #> [1] "49010"
 ```
@@ -217,19 +196,10 @@ Some describing attributes have been assigned to the tibble.
 ``` r
 attr(stats, "id")
 #> [1] "42016"
-```
-
-``` r
 attr(stats, "period")
 #> [1] "1951-01-01 +01" "2010-12-31 +01"
-```
-
-``` r
 attr(stats, "returnperiods_a")
 #> [1]   1   2   3   5  10  20  30  50 100
-```
-
-``` r
 attr(stats, "source")
 #> [1] "KOSTRA-DWD-2010R"
 ```
@@ -267,9 +237,6 @@ helper function.
 ``` r
 as_yield(62.1, d = 240)
 #> 43.1 [L/ha/s]
-```
-
-``` r
 
 as_depth(43.1, d = 240)
 #> 62.1 [mm]
@@ -344,16 +311,3 @@ plot_idf(stats, log10 = TRUE)
 See
 [here](https://github.com/dimfalk/kostra2010R/blob/main/.github/CONTRIBUTING.md)
 if you’d like to contribute.
-
-## Legal information
-
-According to the [terms of
-use](https://opendata.dwd.de/climate_environment/CDC/Terms_of_use.pdf)
-for data on the CDC-OpenData area, freely accessible data may be re-used
-without any restrictions provided other than the source is referenced,
-as laid down in the
-[GeoNutzV](http://www.gesetze-im-internet.de/geonutzv/index.html)
-ordinance.
-
-Copyright @ [Deutscher
-Wetterdienst](https://www.dwd.de/EN/service/copyright/templates_dwd_as_source.html)

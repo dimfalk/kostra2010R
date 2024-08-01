@@ -37,7 +37,7 @@ Statistical precipitation values as a function of duration and return period
 \note{
 Last access: 2022-10-20
 
-License: Data licence Germany – attribution – version 2.0
+License: CC BY 4.0
 
 Copyright: Deutscher Wetterdienst 2022 (format modified)
 }

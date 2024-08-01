@@ -21,6 +21,6 @@
 #' @source <https://opendata.dwd.de/climate_environment/CDC/grids_germany/return_periods/precipitation/KOSTRA/KOSTRA_DWD_2010R/gis/>
 #' @note Last access: 2022-10-20
 #' @description <https://www.dwd.de/DE/leistungen/kostra_dwd_rasterwerte/kostra_dwd_rasterwerte.html>
-#' @note License: Data licence Germany – attribution – version 2.0
+#' @note License: CC BY 4.0
 #' @note Copyright: Deutscher Wetterdienst 2022 (format modified)
 "kostra_dwd_2010r"
