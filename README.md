@@ -48,7 +48,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.13.2
+#> 0.13.3
 ```
 
 ## Getting started
