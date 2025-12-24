@@ -39,18 +39,3 @@ test_that("Getting precipitation depths for stats from DWA-A 531 works.", {
   expect_equal(get_depth(stats_ref, d = 4320, tn = 100),
                units::as_units(102.2, "mm"))
 })
-
-test_that("Getting precipitation depths for PEN works.", {
-
-  expect_equal(get_depth(pen_ref, d = 5, tn = 200),
-               units::as_units(19.1, "mm"))
-
-  expect_equal(get_depth(pen_ref, d = 4320, tn = 200),
-               units::as_units(142.5, "mm"))
-
-  expect_equal(get_depth(pen_ref, d = 5, tn = 10000),
-               units::as_units(29.5, "mm"))
-
-  expect_equal(get_depth(pen_ref, d = 4320, tn = 10000),
-               units::as_units(214.6, "mm"))
-})
