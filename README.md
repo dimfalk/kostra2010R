@@ -46,7 +46,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.13.4
+#> 0.13.7
 ```
 
 ## Getting started
@@ -293,14 +293,22 @@ get_returnp(stats, hn = 75.2, d = 1440, interpolate = TRUE)
 
 ### Further utilization
 
-Data can additionally be visualized as intensity-duration-frequency
-curves using `plot_idf()`, underpinned by `{ggplot2}` …
+Cell-specific statistical values can additionally be visualized as
+intensity-duration-frequency curves …
 
 ``` r
-plot_idf(stats, log10 = TRUE)
+ggplot_idf(stats, log10 = TRUE)
 ```
 
 <img src="man/figures/README-unnamed-chunk-18-1.png" alt="" width="100%" />
+
+… examined spatially for defined duration levels and return periods …
+
+``` r
+ggplot_spatial(d = 1440, tn = 100)
+```
+
+<img src="man/figures/README-unnamed-chunk-19-1.png" alt="" width="100%" />
 
 … or exported to disk using `write_stats()` based on `write.table()`.
 
