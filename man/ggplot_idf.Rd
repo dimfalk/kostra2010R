@@ -27,6 +27,8 @@ get_stats("42016") |> ggplot_idf()
 get_stats("42016") |> ggplot_idf(tn = 100)
 
 get_stats("42016") |> ggplot_idf(log10 = TRUE)
+
+get_stats("42016", as_depth = FALSE) |> ggplot_idf()
 }
 }
 \seealso{
