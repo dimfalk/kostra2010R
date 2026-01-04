@@ -46,7 +46,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.13.7
+#> 0.13.8
 ```
 
 ## Getting started
@@ -234,7 +234,7 @@ helper function.
 
 ``` r
 as_yield(62.1, d = 240)
-#> 43.1 [L/(s*ha)]
+#> 43.1 [L/ha/s]
 
 as_depth(43.1, d = 240)
 #> 62.1 [mm]
@@ -300,7 +300,7 @@ intensity-duration-frequency curves …
 ggplot_idf(stats, log10 = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-18-1.png" alt="" width="100%" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
 
 … examined spatially for defined duration levels and return periods …
 
@@ -308,7 +308,7 @@ ggplot_idf(stats, log10 = TRUE)
 ggplot_spatial(d = 1440, tn = 100)
 ```
 
-<img src="man/figures/README-unnamed-chunk-19-1.png" alt="" width="100%" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
 
 … or exported to disk using `write_stats()` based on `write.table()`.
 
