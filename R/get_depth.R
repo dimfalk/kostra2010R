@@ -4,17 +4,13 @@
 #'     as provided by `get_stats()`.
 #' @param d numeric. Precipitation duration level \code{[min]}.
 #' @param tn numeric. Return period \code{[a]}.
-#' @param uc logical. Consider overall uncertainties, as proposed in
-#'     Malitz & Ertel (2015)?
+#' @param uc logical. Consider overall uncertainties,
+#'     as provided by `get_uncertainties()`?
 #'
 #' @return units. Precipitation depth \code{[mm]}.
 #' @export
 #'
-#' @seealso [get_stats()]
-#'
-#' @references
-#' Malitz, G. & Ertel, H. (2015): KOSTRA-DWD-2010 -
-#'     Starkniederschlagshöhen für Deutschland (Bezugszeitraum 1951 bis 2010).
+#' @seealso [get_stats()], [get_uncertainties()]
 #'
 #' @examples
 #' stats <- get_stats("42016")
@@ -54,17 +50,9 @@ get_depth <- function(x = NULL,
 
   if (uc == TRUE) {
 
-    p <- switch(as.character(tn),
+    u <- attr(x, "id") |> get_uncertainties()
 
-                "1" = 0.10,
-                "2" = 0.10,
-                "3" = 0.10,
-                "5" = 0.10,
-                "10" = 0.15,
-                "20" = 0.15,
-                "30" = 0.15,
-                "50" = 0.15,
-                "100" = 0.20)
+    p <- u[u[["D_min"]] == d, ind + 3] |> as.numeric() / 100
 
     hn <- (hn * c(1 - p, 1 + p)) |> round(1)
   }

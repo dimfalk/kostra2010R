@@ -14,8 +14,8 @@ as provided by \code{get_stats()}.}
 
 \item{tn}{numeric. Return period \code{[a]}.}
 
-\item{uc}{logical. Consider overall uncertainties, as proposed in
-Malitz & Ertel (2015)?}
+\item{uc}{logical. Consider overall uncertainties,
+as provided by \code{get_uncertainties()}?}
 }
 \value{
 units. Precipitation depth \code{[mm]}.
@@ -29,10 +29,6 @@ stats <- get_stats("42016")
 get_depth(stats, d = 60, tn = 50)
 get_depth(stats, d = 60, tn = 50, uc = TRUE)
 }
-\references{
-Malitz, G. & Ertel, H. (2015): KOSTRA-DWD-2010 -
-Starkniederschlagshöhen für Deutschland (Bezugszeitraum 1951 bis 2010).
-}
 \seealso{
-\code{\link[=get_stats]{get_stats()}}
+\code{\link[=get_stats]{get_stats()}}, \code{\link[=get_uncertainties]{get_uncertainties()}}
 }
