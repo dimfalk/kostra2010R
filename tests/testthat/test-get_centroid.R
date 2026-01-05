@@ -5,8 +5,8 @@ test_that("Output class is as expected.", {
 
 test_that("Function working as intended.", {
 
-  p <- get_centroid(c(6.09, 50.46), crs = "epsg:4326") |> sf::st_coordinates() |> as.numeric()
-  expect_equal(p, c(6.09, 50.46))
+  p <- get_centroid(c(6.08, 50.78), crs = "epsg:4326") |> sf::st_coordinates() |> as.numeric()
+  expect_equal(p, c(6.08, 50.78))
 
   p <- get_centroid(c(367773, 5703579), crs = "epsg:25832") |> sf::st_coordinates() |> as.numeric()
   expect_equal(p, c(367773, 5703579))

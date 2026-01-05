@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' get_centroid(c(6.09, 50.46), crs = "epsg:4326")
+#' get_centroid(c(6.08, 50.78), crs = "epsg:4326")
 #' get_centroid(c(367773, 5703579), crs = "epsg:25832")
 #'
 #' get_centroid("40477")
@@ -20,7 +20,7 @@ get_centroid <- function(x = NULL,
 
   # debugging ------------------------------------------------------------------
 
-  # x <- c(6.09, 50.46)
+  # x <- c(6.08, 50.78)
   # x <- c(367773, 5703579)
   # crs <- "epsg:4326"
 
@@ -75,7 +75,6 @@ get_centroid <- function(x = NULL,
   if (hits == 0) {
 
     "Geocoded `x` does not intersect spatially with KOSTRA-DWD-2010R tiles." |> warning()
-
   }
 
   # return object

@@ -20,7 +20,7 @@ Object of class \code{c("sfc_POINT", "sfc")}.
 Construct a geometry set object of type sfc_POINT based on user input
 }
 \examples{
-get_centroid(c(6.09, 50.46), crs = "epsg:4326")
+get_centroid(c(6.08, 50.78), crs = "epsg:4326")
 get_centroid(c(367773, 5703579), crs = "epsg:25832")
 
 get_centroid("40477")
