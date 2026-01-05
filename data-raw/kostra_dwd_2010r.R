@@ -31,14 +31,14 @@ for (i in 1:length(d)) {
 
   assign(ds, files_shp[i] |> sf::read_sf())
 
-  # replace -99.9 by actual NA values
-  geom <- get(ds) |> sf::st_geometry()
+  # replace -99.9 in relevant columns by actual NA values, drop empty rows
+  cnames <- get(ds) |> colnames() |> stringr::str_subset(pattern = "HN_")
 
-  data <- get(ds) |> sf::st_drop_geometry()
+  res <- get(ds) |>
+    dplyr::mutate(dplyr::across(dplyr::all_of(cnames), dplyr::na_if, -99.9)) |>
+    dplyr::filter(dplyr::if_all(dplyr::all_of(cnames), ~ !is.na(.)))
 
-  data <- replace(data, data == -99.9, NA)
-
-  assign(ds, sf::st_set_geometry(data, geom))
+  assign(ds, res)
 
   kostra_dwd_2010r[[ds]] <- get(ds)
 }

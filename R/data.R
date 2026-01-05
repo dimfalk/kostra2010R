@@ -2,7 +2,7 @@
 #'
 #' Statistical precipitation values as a function of duration and return period
 #'
-#' @format A list of length 18 representing duration levels with simple feature collections of type POLYGON with 8,453 features and 11 fields each:
+#' @format A list of length 18 representing duration levels with simple feature collections of type POLYGON with 5,405 features and 11 fields each:
 #' \describe{
 #'   \item{INDEX_RC}{numeric. Unique grid cell identifier.}
 #'
@@ -19,7 +19,7 @@
 #'   \item{geometry}{sfc_GEOMETRY. Coordinates.}
 #' }
 #' @source <https://opendata.dwd.de/climate_environment/CDC/grids_germany/return_periods/precipitation/KOSTRA/KOSTRA_DWD_2010R/gis/>
-#' @note Last access: 2022-10-20
+#' @note Last access: 2026-01-05
 #' @description <https://www.dwd.de/DE/leistungen/kostra_dwd_rasterwerte/kostra_dwd_rasterwerte.html>
 #' @note License: CC BY 4.0
 #' @note Copyright: Deutscher Wetterdienst 2022 (format modified)

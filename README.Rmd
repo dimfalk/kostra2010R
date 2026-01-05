@@ -70,7 +70,7 @@ The most common use case will be to get the relevant "INDEX_RC" based on coordin
 
 ```{r}
 # Sf objects created based on specified coordinates. Don't forget to pass the CRS.
-p1 <- get_centroid(c(6.09, 50.46), crs = "epsg:4326")
+p1 <- get_centroid(c(6.08, 50.78), crs = "epsg:4326")
 p1
 
 p2 <- get_centroid(c(367773, 5703579), crs = "epsg:25832")

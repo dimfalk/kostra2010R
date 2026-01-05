@@ -5,7 +5,7 @@
 \alias{kostra_dwd_2010r}
 \title{Data: KOSTRA-DWD-2010R}
 \format{
-A list of length 18 representing duration levels with simple feature collections of type POLYGON with 8,453 features and 11 fields each:
+A list of length 18 representing duration levels with simple feature collections of type POLYGON with 5,405 features and 11 fields each:
 \describe{
 \item{INDEX_RC}{numeric. Unique grid cell identifier.}
 
@@ -35,7 +35,7 @@ kostra_dwd_2010r
 Statistical precipitation values as a function of duration and return period
 }
 \note{
-Last access: 2022-10-20
+Last access: 2026-01-05
 
 License: CC BY 4.0
 

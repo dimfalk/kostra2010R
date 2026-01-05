@@ -46,7 +46,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.13.8
+#> 0.13.10
 ```
 
 ## Getting started
@@ -84,14 +84,14 @@ in terms of return periods.
 
 ``` r
 # Sf objects created based on specified coordinates. Don't forget to pass the CRS.
-p1 <- get_centroid(c(6.09, 50.46), crs = "epsg:4326")
+p1 <- get_centroid(c(6.08, 50.78), crs = "epsg:4326")
 p1
 #> Geometry set for 1 feature 
 #> Geometry type: POINT
 #> Dimension:     XY
-#> Bounding box:  xmin: 6.09 ymin: 50.46 xmax: 6.09 ymax: 50.46
+#> Bounding box:  xmin: 6.08 ymin: 50.78 xmax: 6.08 ymax: 50.78
 #> Geodetic CRS:  WGS 84
-#> POINT (6.09 50.46)
+#> POINT (6.08 50.78)
 
 p2 <- get_centroid(c(367773, 5703579), crs = "epsg:25832")
 p2
@@ -142,7 +142,7 @@ relevant grid index.
 ``` r
 # Get indices by topological intersection between location point and grid cells.
 get_idx(p1)
-#> [1] "61002"
+#> [1] "57002"
 get_idx(p2)
 #> [1] "49011"
 get_idx(p3)
@@ -234,7 +234,7 @@ helper function.
 
 ``` r
 as_yield(62.1, d = 240)
-#> 43.1 [L/ha/s]
+#> 43.1 [L/(s*ha)]
 
 as_depth(43.1, d = 240)
 #> 62.1 [mm]
@@ -300,7 +300,7 @@ intensity-duration-frequency curves …
 ggplot_idf(stats, log10 = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" alt="" width="100%" />
 
 … examined spatially for defined duration levels and return periods …
 
@@ -308,7 +308,7 @@ ggplot_idf(stats, log10 = TRUE)
 ggplot_spatial(d = 1440, tn = 100)
 ```
 
-<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" alt="" width="100%" />
 
 … or exported to disk using `write_stats()` based on `write.table()`.
 
