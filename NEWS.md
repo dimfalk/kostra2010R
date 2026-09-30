@@ -1,4 +1,4 @@
-# version 0.13.13
+# version 0.13.14
 
 ## features
 
@@ -7,7 +7,7 @@
 - `get_returnp()` now allows interpolation of return periods with `interpolate = TRUE`
 - `get_depth()` now allows to consider uncertainties with `uc = TRUE`
 - `get_stats()` now optionally return precipitation yield values with `as_depth = FALSE`
-- `plot_idf` now allows to visualize intensity-duration-frequency curves per tile
+- `plot_idf()` now allows to visualize intensity-duration-frequency curves per tile
 - `view_spatial()` now allows to interactively explore tile locations, with optional output to disk
 
 
