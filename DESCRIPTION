@@ -1,6 +1,6 @@
 Package: kostra2010R
 Title: R Interface for KOSTRA-DWD-2010R Dataset
-Version: 0.13.14
+Version: 0.13.15
 Date: 2026-09-30
 Authors@R: 
     person("Dimitri", "Falk", role = c("aut", "cre"), email = "falk.dimitri@eglv.de")

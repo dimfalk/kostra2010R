@@ -1,8 +1,8 @@
-# version 0.13.14
+# version 0.13.15
 
 ## features
 
-- `get_pdepth()` now allows to determine statistical precipitation depths
+- `get_depth()` now allows to determine statistical precipitation depths
 - `get_centroid()` now allows determination of coordinates based on municipality names and postal codes
 - `get_returnp()` now allows interpolation of return periods with `interpolate = TRUE`
 - `get_depth()` now allows to consider uncertainties with `uc = TRUE`
@@ -13,7 +13,7 @@
 
 ## enhancements
 
-- `get_pdepth()` and `get_returnp()` now return values supplemented by units
+- `get_depth()` and `get_returnp()` now return values supplemented by units
 - `get_centroid()` now prompts an error when the object returned contains no hits
 - package data has been imported using `sf::read_sf()` instead of `sf::st_read()`
 - proper internal unit conversion when using `as_yield()` and `as_depth()`

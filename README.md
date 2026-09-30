@@ -46,7 +46,7 @@ and load the package via
 
 ``` r
 library(kostra2010R)
-#> 0.13.13
+#> 0.13.15
 ```
 
 ## Getting started
@@ -166,7 +166,7 @@ stats <- get_stats("42016")
 
 stats
 #> # A tibble: 18 × 10
-#>    D_min HN_001A HN_002A HN_003A HN_005A HN_010A HN_020A HN_030A HN_050A HN_100A
+#>    D_MIN HN_001A HN_002A HN_003A HN_005A HN_010A HN_020A HN_030A HN_050A HN_100A
 #>    <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
 #>  1     5     4.9     6.6     7.6     8.9    10.6    12.3    13.3    14.5    16.2
 #>  2    10     7.9    10.1    11.4    13.1    15.3    17.5    18.8    20.5    22.7
