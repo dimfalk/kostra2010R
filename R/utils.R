@@ -2,6 +2,6 @@
 c("kostra_dwd_2010r",
   "INDEX_RC",
   "addr",
-  "D_min",
+  "D_MIN",
   "value",
   "name") |> utils::globalVariables()
