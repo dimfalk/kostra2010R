@@ -44,8 +44,5 @@ jobs:
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
-        env:
-          OPENSSL_CONF: /dev/null
-          QT_QPA_PLATFORM: offscreen
         with:
           upload-snapshots: true
