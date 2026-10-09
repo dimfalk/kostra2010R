@@ -12,8 +12,9 @@ test_that("Output class is as expected.", {
 })
 
 test_that("PNG snapshot is created.", {
-  # testthat::skip_if(Sys.info()[["sysname"]] == "Linux" && identical(Sys.getenv("CI"), "true"),
-  #                   "PhantomJS snapshot rendering is flaky on Linux CI")
+
+  testthat::skip_if(Sys.info()[["sysname"]] == "Linux" && identical(Sys.getenv("CI"), "true"),
+                    "PhantomJS install fails for ubuntu-latest, 24.04.5 LTS")
 
   if (!webshot::is_phantomjs_installed()) {
 
